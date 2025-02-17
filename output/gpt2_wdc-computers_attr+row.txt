@@ -1,0 +1,8 @@
+All arguments:: {'seed': 42, 'tbs': 16, 'vbs': 32, 'base_model': 'gpt2', 'leaved_dataset_name': 'wdc-computers', 'serialization_mode': 'mode1', 'row_sample_func': 'automl_filter', 'train_data': 'attr+row', 'patience_start': 20}
+Evaluation Results
+wdc-computers:: F1:: 72.32947232947234  , Test ACC:: 80.45454545454545 
+wdc-shoes:: F1:: 67.72616136919315  , Test ACC:: 75.97816196542311 
+wdc-watches:: F1:: 74.34842249657065  , Test ACC:: 83.0 
+wdc-cameras:: F1:: 70.32679738562092  , Test ACC:: 79.36363636363636 
+dbgo:: F1:: 89.70013037809647  , Test ACC:: 95.87251828631139 
+music:: F1:: 99.6500159083678  , Test ACC:: 99.66153846153846 

@@ -1,0 +1,6 @@
+data/raw/*
+__pycache__/
+data/AutogluonModels/
+data/prepared/
+data/automl/
+utils/__pycache__/

@@ -1,0 +1,8 @@
+All arguments:: {'seed': 42, 'tbs': 16, 'vbs': 32, 'base_model': 'gpt2', 'leaved_dataset_name': 'music', 'serialization_mode': 'mode1', 'row_sample_func': 'automl_filter', 'train_data': 'attr+row', 'patience_start': 20}
+Evaluation Results
+wdc-computers:: F1:: 81.52327221438645  , Test ACC:: 88.0909090909091 
+wdc-shoes:: F1:: 64.90218642117375  , Test ACC:: 72.24749772520474 
+wdc-watches:: F1:: 72.10526315789474  , Test ACC:: 80.72727272727272 
+wdc-cameras:: F1:: 67.94717887154862  , Test ACC:: 75.72727272727273 
+dbgo:: F1:: 90.85201793721973  , Test ACC:: 96.44723092998954 
+music:: F1:: 97.50081142486205  , Test ACC:: 97.63076923076923 

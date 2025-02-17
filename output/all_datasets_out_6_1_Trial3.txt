@@ -1,0 +1,462 @@
+trainable params: 7508348928
+trainable params: 3,416,064 || all params: 7,508,348,928 || trainable%: 0.0455
+--------------------------------------------------
+Experiment to leave the wdc-computers dataset out with attr+row as training data.
+The model will be trained on the mixture of attribute and row level data.
+The training set size of wdc-shoes is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-watches is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-cameras is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of dbgo is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of music is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+Examples(row level) after the serialization are:
+
+Record A is <p>COL nike air zoom structure 19 para mujer violeta azul zapatillas, COL N/A, COL N/A</p>. Record B is <p>COL nike femme air zoom pegasus 33 violet blanc rose chaussures pour, COL unit s nike zoom air au talon et l avant pied pour plus de dynamismemesh tiss favorisant la circulation d air fraisc bles flywire maintenant le piedsemelle interm diaire en cushlon pour plus d amorti, COL N/A</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL junghans men s meister chronoscope automatic chronograph watch 027 4324 44 shop com, COL meister is junghans expression of the style of their classic watches while staying true to the principles of the finest materials and technological improvements refined aesthetics reminiscent of the watches designed by anton ziegler for the brand between 1930 and 1960 inside the watch is an automatic self winding chronograph j880 2 movement with 30 minute and 12 hour counters for the chronograph as well as sub second and day and date function this is displayed on a sunray brushed dark grey dial with hour and minutes marked clearly and simply the case is a stainless steel construction featuring exhibition case back with curved sicralan coated hard plexiglass true to the original giving it an elegant curvature to the dial the watch fastens on a 9 link stainless steel bracelet polished and matte finished for a perfect accompaniment to the case and dial, COL N/A</p>. Record B is <p>COL men s chronograph 1972 chronoscope solar junghans nur 749 00, COL N/A, COL junghans</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL canon 1133b001aa cb 2lx battery charger from solid signal, COL the canon cb 2lx compact battery charger is designed to take full advantage of high capacity rechargeable batteries it has been specially designed to charge the canon nb 5l battery, COL canon</p>. Record B is <p>COL cnd1133b001aa canon cb 2lx battery charger camera photo accessories page 2121 all tech toys, COL the cb 2lx battery charger charges canon nb 5l batteries allowing you to charge an additional battery for your digital camera, COL canon</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL sql/xml is making good progress, COL a eisenberg , j melton</p>. Record B is <p>COL sql/xml is making good progress, COL a eisenberg , j melton</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL Takin' My Time (Kiss My Amps Live), COL Tom Petty and the Heartbreakers, COL Kiss My Amps Live, COL 2011</p>. Record B is <p>COL 005-Nowhere, ca, COL The Sore Thumbs, COL Listen Up!! (2006), COL N/A</p>. Given the attributes of the two records, are they the same?
+The size of the row level concatenation for training, validation, and test are: 6000, 11918, 12291
+0 out of 11027 data samples are filtered.
+0 out of 11918 data samples are filtered.
+The training phase starts from here.
+The size of the training and validation datasets are: 11027, 11918
+Here is the configuration for the experiment:
+	seed: 42	base_model: /scratch/mhussein/.cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659	dataset_name: wdc-computers	mode: mode1 	max_len: 350	lr: 2e-05	batch_size: 1	patience: 6	p_start: 20
+Epoch: 1 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 74.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1039.8984005451202 secs
+Epoch: 2 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1039.9594690799713 secs
+Epoch: 3 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.30 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1039.560447216034 secs
+Epoch: 4 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 74.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1042.6383526325226 secs
+Epoch: 5 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 75.40 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1041.6202912330627 secs
+Epoch: 6 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1041.0219411849976 secs
+Epoch: 7 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.40 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1038.1568932533264 secs
+Epoch: 8 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 71.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.46546292305 secs
+Epoch: 9 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.50 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.1493153572083 secs
+Epoch: 10 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.3247575759888 secs
+Epoch: 11 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 74.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.6935498714447 secs
+Epoch: 12 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.851975440979 secs
+Epoch: 13 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.70 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.4120666980743 secs
+Epoch: 14 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.40 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1035.9361517429352 secs
+Epoch: 15 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 75.05 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.2499923706055 secs
+Epoch: 16 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 74.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.9938898086548 secs
+Epoch: 17 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.8566827774048 secs
+Epoch: 18 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 74.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.0325906276703 secs
+Epoch: 19 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 74.05 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1038.4000434875488 secs
+Epoch: 20 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.3188030719757 secs
+Epoch: 21 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.3623900413513 secs
+Epoch: 22 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.50 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1042.1542806625366 secs
+Epoch: 23 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1038.8562700748444 secs
+Epoch: 24 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.5684387683868 secs
+Epoch: 25 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 75.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.3401787281036 secs
+Epoch: 26 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.0949223041534 secs
+Epoch: 27 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 74.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1038.3648772239685 secs
+Epoch: 28 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.0341901779175 secs
+Epoch: 29 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.8132371902466 secs
+Epoch: 30 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 74.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.9017279148102 secs
+Epoch: 31 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.5116984844208 secs
+Epoch: 32 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 74.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.2595279216766 secs
+Epoch: 33 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.90 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1038.2162375450134 secs
+Epoch: 34 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.40 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.4312238693237 secs
+Epoch: 35 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.6984586715698 secs
+Epoch: 36 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.6862394809723 secs
+Epoch: 37 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.2171676158905 secs
+Epoch: 38 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.4144744873047 secs
+Epoch: 39 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.8691639900208 secs
+Epoch: 40 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.653508901596 secs
+Epoch: 41 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.7397966384888 secs
+Epoch: 42 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.05 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.9663519859314 secs
+Epoch: 43 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 75.50 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1038.4649257659912 secs
+Epoch: 44 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1037.6057045459747 secs
+Epoch: 45 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.40 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1039.0969500541687 secs
+Epoch: 46 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1041.1120200157166 secs
+Epoch: 47 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1041.2295808792114 secs
+Epoch: 48 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 72.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1040.321471452713 secs
+Epoch: 49 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.90 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1038.7935781478882 secs
+Epoch: 50 | Train Loss: nan | Valid Loss: nan | Train acc: 59.25 | Valid acc: 73.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1040.8377981185913 secs
+The training phase is finished.
+Start the evaluation phase.
+0 out of 1100 data samples are filtered.
+trainable params: 7508348928
+trainable params: 3,416,064 || all params: 7,508,348,928 || trainable%: 0.0455
+--------------------------------------------------
+Experiment to leave the wdc-shoes dataset out with attr+row as training data.
+The model will be trained on the mixture of attribute and row level data.
+The training set size of wdc-computers is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-watches is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-cameras is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of dbgo is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of music is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+Examples(row level) after the serialization are:
+
+Record A is <p>COL targus notebook backpac 15 4 zwart grijs prijzen tweakers, COL N/A, COL N/A</p>. Record B is <p>COL amazonbasics 13 3 inch laptop sleeve black carrying cases page 10 office outlet express, COL the amazonbasics 13 3 inch laptop sleeve provides stylish protection for your laptop or ultrabook protect your laptop from bumps and scratches, COL amazonbasics</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL junghans men s meister chronoscope automatic chronograph watch 027 4324 44 shop com, COL meister is junghans expression of the style of their classic watches while staying true to the principles of the finest materials and technological improvements refined aesthetics reminiscent of the watches designed by anton ziegler for the brand between 1930 and 1960 inside the watch is an automatic self winding chronograph j880 2 movement with 30 minute and 12 hour counters for the chronograph as well as sub second and day and date function this is displayed on a sunray brushed dark grey dial with hour and minutes marked clearly and simply the case is a stainless steel construction featuring exhibition case back with curved sicralan coated hard plexiglass true to the original giving it an elegant curvature to the dial the watch fastens on a 9 link stainless steel bracelet polished and matte finished for a perfect accompaniment to the case and dial, COL N/A</p>. Record B is <p>COL men s chronograph 1972 chronoscope solar junghans nur 749 00, COL N/A, COL junghans</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL canon 1133b001aa cb 2lx battery charger from solid signal, COL the canon cb 2lx compact battery charger is designed to take full advantage of high capacity rechargeable batteries it has been specially designed to charge the canon nb 5l battery, COL canon</p>. Record B is <p>COL cnd1133b001aa canon cb 2lx battery charger camera photo accessories page 2121 all tech toys, COL the cb 2lx battery charger charges canon nb 5l batteries allowing you to charge an additional battery for your digital camera, COL canon</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL sql/xml is making good progress, COL a eisenberg , j melton</p>. Record B is <p>COL sql/xml is making good progress, COL a eisenberg , j melton</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL Takin' My Time (Kiss My Amps Live), COL Tom Petty and the Heartbreakers, COL Kiss My Amps Live, COL 2011</p>. Record B is <p>COL 005-Nowhere, ca, COL The Sore Thumbs, COL Listen Up!! (2006), COL N/A</p>. Given the attributes of the two records, are they the same?
+The size of the row level concatenation for training, validation, and test are: 6000, 12438, 12292
+0 out of 11168 data samples are filtered.
+0 out of 12438 data samples are filtered.
+The training phase starts from here.
+The size of the training and validation datasets are: 11168, 12438
+Here is the configuration for the experiment:
+	seed: 42	base_model: /scratch/mhussein/.cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659	dataset_name: wdc-shoes	mode: mode1 	max_len: 350	lr: 2e-05	batch_size: 1	patience: 6	p_start: 20
+Epoch: 1 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 72.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.5816159248352 secs
+Epoch: 2 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 75.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.1991724967957 secs
+Epoch: 3 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.50 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1022.7771623134613 secs
+Epoch: 4 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.655483007431 secs
+Epoch: 5 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 75.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1022.9367351531982 secs
+Epoch: 6 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.5880444049835 secs
+Epoch: 7 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 71.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.0314984321594 secs
+Epoch: 8 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 72.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1022.5453584194183 secs
+Epoch: 9 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 72.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.8956921100616 secs
+Epoch: 10 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.6170072555542 secs
+Epoch: 11 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 72.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.2679333686829 secs
+Epoch: 12 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 72.90 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.8515901565552 secs
+Epoch: 13 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 75.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.4880492687225 secs
+Epoch: 14 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 75.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.320071697235 secs
+Epoch: 15 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.4258892536163 secs
+Epoch: 16 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 72.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.4417288303375 secs
+Epoch: 17 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.30 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.8192901611328 secs
+Epoch: 18 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.40 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.77388048172 secs
+Epoch: 19 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.6814029216766 secs
+Epoch: 20 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.1965067386627 secs
+Epoch: 21 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.8922352790833 secs
+Epoch: 22 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 72.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.5925939083099 secs
+Epoch: 23 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.7381234169006 secs
+Epoch: 24 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.40 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.6691737174988 secs
+Epoch: 25 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.743609905243 secs
+Epoch: 26 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.6867668628693 secs
+Epoch: 27 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.6854839324951 secs
+Epoch: 28 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.4128699302673 secs
+Epoch: 29 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.4717926979065 secs
+Epoch: 30 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.40 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.8196687698364 secs
+Epoch: 31 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 75.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.9777872562408 secs
+Epoch: 32 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 75.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.0545377731323 secs
+Epoch: 33 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.6250755786896 secs
+Epoch: 34 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.90 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.7440543174744 secs
+Epoch: 35 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.90 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.6717004776 secs
+Epoch: 36 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.1498355865479 secs
+Epoch: 37 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 72.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1022.6702117919922 secs
+Epoch: 38 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.2456843852997 secs
+Epoch: 39 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.6676943302155 secs
+Epoch: 40 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.673677444458 secs
+Epoch: 41 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.3570291996002 secs
+Epoch: 42 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.8712530136108 secs
+Epoch: 43 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.092934370041 secs
+Epoch: 44 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 73.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.8039135932922 secs
+Epoch: 45 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 72.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.513882637024 secs
+Epoch: 46 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 72.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.3843319416046 secs
+Epoch: 47 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.3172824382782 secs
+Epoch: 48 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.9764268398285 secs
+Epoch: 49 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.9321541786194 secs
+Epoch: 50 | Train Loss: nan | Valid Loss: nan | Train acc: 58.89 | Valid acc: 74.05 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.3273632526398 secs
+The training phase is finished.
+Start the evaluation phase.
+0 out of 1100 data samples are filtered.
+trainable params: 7508348928
+trainable params: 3,416,064 || all params: 7,508,348,928 || trainable%: 0.0455
+--------------------------------------------------
+Experiment to leave the wdc-watches dataset out with attr+row as training data.
+The model will be trained on the mixture of attribute and row level data.
+The training set size of wdc-computers is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-shoes is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-cameras is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of dbgo is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of music is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+Examples(row level) after the serialization are:
+
+Record A is <p>COL targus notebook backpac 15 4 zwart grijs prijzen tweakers, COL N/A, COL N/A</p>. Record B is <p>COL amazonbasics 13 3 inch laptop sleeve black carrying cases page 10 office outlet express, COL the amazonbasics 13 3 inch laptop sleeve provides stylish protection for your laptop or ultrabook protect your laptop from bumps and scratches, COL amazonbasics</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL nike air zoom structure 19 para mujer violeta azul zapatillas, COL N/A, COL N/A</p>. Record B is <p>COL nike femme air zoom pegasus 33 violet blanc rose chaussures pour, COL unit s nike zoom air au talon et l avant pied pour plus de dynamismemesh tiss favorisant la circulation d air fraisc bles flywire maintenant le piedsemelle interm diaire en cushlon pour plus d amorti, COL N/A</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL canon 1133b001aa cb 2lx battery charger from solid signal, COL the canon cb 2lx compact battery charger is designed to take full advantage of high capacity rechargeable batteries it has been specially designed to charge the canon nb 5l battery, COL canon</p>. Record B is <p>COL cnd1133b001aa canon cb 2lx battery charger camera photo accessories page 2121 all tech toys, COL the cb 2lx battery charger charges canon nb 5l batteries allowing you to charge an additional battery for your digital camera, COL canon</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL sql/xml is making good progress, COL a eisenberg , j melton</p>. Record B is <p>COL sql/xml is making good progress, COL a eisenberg , j melton</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL Takin' My Time (Kiss My Amps Live), COL Tom Petty and the Heartbreakers, COL Kiss My Amps Live, COL 2011</p>. Record B is <p>COL 005-Nowhere, ca, COL The Sore Thumbs, COL Listen Up!! (2006), COL N/A</p>. Given the attributes of the two records, are they the same?
+The size of the row level concatenation for training, validation, and test are: 6000, 12056, 12291
+0 out of 11135 data samples are filtered.
+0 out of 12056 data samples are filtered.
+The training phase starts from here.
+The size of the training and validation datasets are: 11135, 12056
+Here is the configuration for the experiment:
+	seed: 42	base_model: /scratch/mhussein/.cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659	dataset_name: wdc-watches	mode: mode1 	max_len: 350	lr: 2e-05	batch_size: 1	patience: 6	p_start: 20
+Epoch: 1 | Train Loss: nan | Valid Loss: nan | Train acc: 59.13 | Valid acc: 74.10 | Train f1: 0.04 | Valid f1: 0.00 | Train Time: 1015.8531746864319 secs
+Epoch: 2 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1015.7122180461884 secs
+Epoch: 3 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1015.2542996406555 secs
+Epoch: 4 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1014.5812692642212 secs
+Epoch: 5 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1014.8647692203522 secs
+Epoch: 6 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1015.0762183666229 secs
+Epoch: 7 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.30 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1015.5909185409546 secs
+Epoch: 8 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 72.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1014.3321623802185 secs
+Epoch: 9 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 72.30 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1015.5504388809204 secs
+Epoch: 10 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 72.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.9922785758972 secs
+Epoch: 11 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1015.8655869960785 secs
+Epoch: 12 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1015.8329157829285 secs
+Epoch: 13 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 75.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1017.2288970947266 secs
+Epoch: 14 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1019.958482503891 secs
+Epoch: 15 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 72.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1015.8647403717041 secs
+Epoch: 16 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.4703171253204 secs
+Epoch: 17 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1017.5068378448486 secs
+Epoch: 18 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1017.8932554721832 secs
+Epoch: 19 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.4135503768921 secs
+Epoch: 20 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.2540526390076 secs
+Epoch: 21 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 75.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1017.8015723228455 secs
+Epoch: 22 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1020.5653471946716 secs
+Epoch: 23 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1018.669709444046 secs
+Epoch: 24 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1019.6224341392517 secs
+Epoch: 25 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 72.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1019.3183019161224 secs
+Epoch: 26 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1021.3207042217255 secs
+Epoch: 27 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1020.5088737010956 secs
+Epoch: 28 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1020.0276916027069 secs
+Epoch: 29 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1018.6094672679901 secs
+Epoch: 30 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1018.5707914829254 secs
+Epoch: 31 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.9090096950531 secs
+Epoch: 32 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1017.2056057453156 secs
+Epoch: 33 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1017.2245230674744 secs
+Epoch: 34 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.50 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1017.0605733394623 secs
+Epoch: 35 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1015.894159078598 secs
+Epoch: 36 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.50 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1014.6914274692535 secs
+Epoch: 37 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.5657608509064 secs
+Epoch: 38 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.6602237224579 secs
+Epoch: 39 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 72.50 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.7821664810181 secs
+Epoch: 40 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.0162668228149 secs
+Epoch: 41 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.2102501392365 secs
+Epoch: 42 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.0256712436676 secs
+Epoch: 43 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.6517317295074 secs
+Epoch: 44 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 72.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1015.912415266037 secs
+Epoch: 45 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1017.0161607265472 secs
+Epoch: 46 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.8050155639648 secs
+Epoch: 47 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 75.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.2891426086426 secs
+Epoch: 48 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.2605683803558 secs
+Epoch: 49 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 74.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.9625873565674 secs
+Epoch: 50 | Train Loss: nan | Valid Loss: nan | Train acc: 59.12 | Valid acc: 73.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1016.679092168808 secs
+The training phase is finished.
+Start the evaluation phase.
+0 out of 1100 data samples are filtered.
+trainable params: 7508348928
+trainable params: 3,416,064 || all params: 7,508,348,928 || trainable%: 0.0455
+--------------------------------------------------
+Experiment to leave the wdc-cameras dataset out with attr+row as training data.
+The model will be trained on the mixture of attribute and row level data.
+The training set size of wdc-computers is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-shoes is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-watches is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of dbgo is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of music is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+Examples(row level) after the serialization are:
+
+Record A is <p>COL targus notebook backpac 15 4 zwart grijs prijzen tweakers, COL N/A, COL N/A</p>. Record B is <p>COL amazonbasics 13 3 inch laptop sleeve black carrying cases page 10 office outlet express, COL the amazonbasics 13 3 inch laptop sleeve provides stylish protection for your laptop or ultrabook protect your laptop from bumps and scratches, COL amazonbasics</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL nike air zoom structure 19 para mujer violeta azul zapatillas, COL N/A, COL N/A</p>. Record B is <p>COL nike femme air zoom pegasus 33 violet blanc rose chaussures pour, COL unit s nike zoom air au talon et l avant pied pour plus de dynamismemesh tiss favorisant la circulation d air fraisc bles flywire maintenant le piedsemelle interm diaire en cushlon pour plus d amorti, COL N/A</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL junghans men s meister chronoscope automatic chronograph watch 027 4324 44 shop com, COL meister is junghans expression of the style of their classic watches while staying true to the principles of the finest materials and technological improvements refined aesthetics reminiscent of the watches designed by anton ziegler for the brand between 1930 and 1960 inside the watch is an automatic self winding chronograph j880 2 movement with 30 minute and 12 hour counters for the chronograph as well as sub second and day and date function this is displayed on a sunray brushed dark grey dial with hour and minutes marked clearly and simply the case is a stainless steel construction featuring exhibition case back with curved sicralan coated hard plexiglass true to the original giving it an elegant curvature to the dial the watch fastens on a 9 link stainless steel bracelet polished and matte finished for a perfect accompaniment to the case and dial, COL N/A</p>. Record B is <p>COL men s chronograph 1972 chronoscope solar junghans nur 749 00, COL N/A, COL junghans</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL sql/xml is making good progress, COL a eisenberg , j melton</p>. Record B is <p>COL sql/xml is making good progress, COL a eisenberg , j melton</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL Takin' My Time (Kiss My Amps Live), COL Tom Petty and the Heartbreakers, COL Kiss My Amps Live, COL 2011</p>. Record B is <p>COL 005-Nowhere, ca, COL The Sore Thumbs, COL Listen Up!! (2006), COL N/A</p>. Given the attributes of the two records, are they the same?
+The size of the row level concatenation for training, validation, and test are: 6000, 12441, 12291
+0 out of 11061 data samples are filtered.
+0 out of 12441 data samples are filtered.
+The training phase starts from here.
+The size of the training and validation datasets are: 11061, 12441
+Here is the configuration for the experiment:
+	seed: 42	base_model: /scratch/mhussein/.cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659	dataset_name: wdc-cameras	mode: mode1 	max_len: 350	lr: 2e-05	batch_size: 1	patience: 6	p_start: 20
+Epoch: 1 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.70 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.9313216209412 secs
+Epoch: 2 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 75.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.1600630283356 secs
+Epoch: 3 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.887624502182 secs
+Epoch: 4 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 73.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.459766626358 secs
+Epoch: 5 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 73.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.946870803833 secs
+Epoch: 6 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 73.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.3557686805725 secs
+Epoch: 7 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 72.05 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.2658042907715 secs
+Epoch: 8 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 73.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.1240541934967 secs
+Epoch: 9 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 75.70 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.149998664856 secs
+Epoch: 10 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 73.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1027.8199496269226 secs
+Epoch: 11 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 72.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.0342931747437 secs
+Epoch: 12 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 73.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.8724262714386 secs
+Epoch: 13 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 75.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1027.5723097324371 secs
+Epoch: 14 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.70 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1032.8531348705292 secs
+Epoch: 15 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 75.90 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1031.4813463687897 secs
+Epoch: 16 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1036.7469234466553 secs
+Epoch: 17 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1029.7918288707733 secs
+Epoch: 18 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 75.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.3866364955902 secs
+Epoch: 19 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.50 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.0792303085327 secs
+Epoch: 20 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.50 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.0502967834473 secs
+Epoch: 21 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.5713477134705 secs
+Epoch: 22 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.3048777580261 secs
+Epoch: 23 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 73.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1029.3171827793121 secs
+Epoch: 24 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.7095308303833 secs
+Epoch: 25 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.7509310245514 secs
+Epoch: 26 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.0538585186005 secs
+Epoch: 27 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 73.90 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.9933505058289 secs
+Epoch: 28 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.9494171142578 secs
+Epoch: 29 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 75.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.368623495102 secs
+Epoch: 30 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1027.9996297359467 secs
+Epoch: 31 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 76.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.0862653255463 secs
+Epoch: 32 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 75.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.2267904281616 secs
+Epoch: 33 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.40 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.6115682125092 secs
+Epoch: 34 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.3393259048462 secs
+Epoch: 35 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.0276398658752 secs
+Epoch: 36 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 73.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.2655205726624 secs
+Epoch: 37 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.05 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1027.4993529319763 secs
+Epoch: 38 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.9911875724792 secs
+Epoch: 39 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 75.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.4006361961365 secs
+Epoch: 40 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 73.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1029.0531651973724 secs
+Epoch: 41 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1029.0477221012115 secs
+Epoch: 42 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 75.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.7620797157288 secs
+Epoch: 43 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 73.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.984236240387 secs
+Epoch: 44 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.4281556606293 secs
+Epoch: 45 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.70 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.0837316513062 secs
+Epoch: 46 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.50 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.517680644989 secs
+Epoch: 47 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 73.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.8682188987732 secs
+Epoch: 48 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1027.9576609134674 secs
+Epoch: 49 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 74.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.2678229808807 secs
+Epoch: 50 | Train Loss: nan | Valid Loss: nan | Train acc: 58.98 | Valid acc: 75.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.2502393722534 secs
+The training phase is finished.
+Start the evaluation phase.
+0 out of 1100 data samples are filtered.
+trainable params: 7508348928
+trainable params: 3,416,064 || all params: 7,508,348,928 || trainable%: 0.0455
+--------------------------------------------------
+Experiment to leave the dbgo dataset out with attr+row as training data.
+The model will be trained on the mixture of attribute and row level data.
+The training set size of wdc-computers is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-shoes is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-watches is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-cameras is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of music is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+Examples(row level) after the serialization are:
+
+Record A is <p>COL targus notebook backpac 15 4 zwart grijs prijzen tweakers, COL N/A, COL N/A</p>. Record B is <p>COL amazonbasics 13 3 inch laptop sleeve black carrying cases page 10 office outlet express, COL the amazonbasics 13 3 inch laptop sleeve provides stylish protection for your laptop or ultrabook protect your laptop from bumps and scratches, COL amazonbasics</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL nike air zoom structure 19 para mujer violeta azul zapatillas, COL N/A, COL N/A</p>. Record B is <p>COL nike femme air zoom pegasus 33 violet blanc rose chaussures pour, COL unit s nike zoom air au talon et l avant pied pour plus de dynamismemesh tiss favorisant la circulation d air fraisc bles flywire maintenant le piedsemelle interm diaire en cushlon pour plus d amorti, COL N/A</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL junghans men s meister chronoscope automatic chronograph watch 027 4324 44 shop com, COL meister is junghans expression of the style of their classic watches while staying true to the principles of the finest materials and technological improvements refined aesthetics reminiscent of the watches designed by anton ziegler for the brand between 1930 and 1960 inside the watch is an automatic self winding chronograph j880 2 movement with 30 minute and 12 hour counters for the chronograph as well as sub second and day and date function this is displayed on a sunray brushed dark grey dial with hour and minutes marked clearly and simply the case is a stainless steel construction featuring exhibition case back with curved sicralan coated hard plexiglass true to the original giving it an elegant curvature to the dial the watch fastens on a 9 link stainless steel bracelet polished and matte finished for a perfect accompaniment to the case and dial, COL N/A</p>. Record B is <p>COL men s chronograph 1972 chronoscope solar junghans nur 749 00, COL N/A, COL junghans</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL canon 1133b001aa cb 2lx battery charger from solid signal, COL the canon cb 2lx compact battery charger is designed to take full advantage of high capacity rechargeable batteries it has been specially designed to charge the canon nb 5l battery, COL canon</p>. Record B is <p>COL cnd1133b001aa canon cb 2lx battery charger camera photo accessories page 2121 all tech toys, COL the cb 2lx battery charger charges canon nb 5l batteries allowing you to charge an additional battery for your digital camera, COL canon</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL Takin' My Time (Kiss My Amps Live), COL Tom Petty and the Heartbreakers, COL Kiss My Amps Live, COL 2011</p>. Record B is <p>COL 005-Nowhere, ca, COL The Sore Thumbs, COL Listen Up!! (2006), COL N/A</p>. Given the attributes of the two records, are they the same?
+The size of the row level concatenation for training, validation, and test are: 6000, 7545, 7649
+0 out of 10395 data samples are filtered.
+0 out of 7545 data samples are filtered.
+The training phase starts from here.
+The size of the training and validation datasets are: 10395, 7545
+Here is the configuration for the experiment:
+	seed: 42	base_model: /scratch/mhussein/.cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659	dataset_name: dbgo	mode: mode1 	max_len: 350	lr: 2e-05	batch_size: 1	patience: 6	p_start: 20
+Epoch: 1 | Train Loss: nan | Valid Loss: nan | Train acc: 59.61 | Valid acc: 70.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.6165730953217 secs
+Epoch: 2 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 68.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.0431866645813 secs
+Epoch: 3 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.4698603153229 secs
+Epoch: 4 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.5231158733368 secs
+Epoch: 5 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.2027788162231 secs
+Epoch: 6 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1022.9328916072845 secs
+Epoch: 7 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.90 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.563173532486 secs
+Epoch: 8 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.728654384613 secs
+Epoch: 9 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.90 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.8469512462616 secs
+Epoch: 10 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 68.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.6830503940582 secs
+Epoch: 11 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.4458496570587 secs
+Epoch: 12 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.6933498382568 secs
+Epoch: 13 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.6188008785248 secs
+Epoch: 14 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 71.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1027.8570835590363 secs
+Epoch: 15 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1027.2853507995605 secs
+Epoch: 16 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.90 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.9595792293549 secs
+Epoch: 17 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.30 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.542153596878 secs
+Epoch: 18 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.40 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.0560874938965 secs
+Epoch: 19 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 68.05 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.7764942646027 secs
+Epoch: 20 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.7328929901123 secs
+Epoch: 21 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.50 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.4615597724915 secs
+Epoch: 22 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.9464654922485 secs
+Epoch: 23 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 71.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1025.2988765239716 secs
+Epoch: 24 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 68.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.587641954422 secs
+Epoch: 25 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.6008024215698 secs
+Epoch: 26 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.90 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.9355466365814 secs
+Epoch: 27 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.9828808307648 secs
+Epoch: 28 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1022.8358955383301 secs
+Epoch: 29 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 71.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.0969762802124 secs
+Epoch: 30 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 68.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.9830963611603 secs
+Epoch: 31 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.262413263321 secs
+Epoch: 32 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.70 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.5166120529175 secs
+Epoch: 33 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.40 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1022.6338903903961 secs
+Epoch: 34 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1022.5016951560974 secs
+Epoch: 35 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.3212473392487 secs
+Epoch: 36 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.70 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.2118089199066 secs
+Epoch: 37 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.197862148285 secs
+Epoch: 38 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.05 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1029.0769531726837 secs
+Epoch: 39 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 68.05 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.4697787761688 secs
+Epoch: 40 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 68.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1027.627953529358 secs
+Epoch: 41 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.0588338375092 secs
+Epoch: 42 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 71.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.7674322128296 secs
+Epoch: 43 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.0735971927643 secs
+Epoch: 44 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1028.5646150112152 secs
+Epoch: 45 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1029.3666219711304 secs
+Epoch: 46 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1031.4138815402985 secs
+Epoch: 47 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1026.9511032104492 secs
+Epoch: 48 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.6445190906525 secs
+Epoch: 49 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 70.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1024.230274438858 secs
+Epoch: 50 | Train Loss: nan | Valid Loss: nan | Train acc: 59.62 | Valid acc: 69.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 1023.3685400485992 secs
+The training phase is finished.
+Start the evaluation phase.
+0 out of 1100 data samples are filtered.
+trainable params: 7508348928
+trainable params: 3,416,064 || all params: 7,508,348,928 || trainable%: 0.0455
+--------------------------------------------------
+Experiment to leave the music dataset out with attr+row as training data.
+The model will be trained on the mixture of attribute and row level data.
+The training set size of wdc-computers is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-shoes is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-watches is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-cameras is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of dbgo is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+Examples(row level) after the serialization are:
+
+Record A is <p>COL targus notebook backpac 15 4 zwart grijs prijzen tweakers, COL N/A, COL N/A</p>. Record B is <p>COL amazonbasics 13 3 inch laptop sleeve black carrying cases page 10 office outlet express, COL the amazonbasics 13 3 inch laptop sleeve provides stylish protection for your laptop or ultrabook protect your laptop from bumps and scratches, COL amazonbasics</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL nike air zoom structure 19 para mujer violeta azul zapatillas, COL N/A, COL N/A</p>. Record B is <p>COL nike femme air zoom pegasus 33 violet blanc rose chaussures pour, COL unit s nike zoom air au talon et l avant pied pour plus de dynamismemesh tiss favorisant la circulation d air fraisc bles flywire maintenant le piedsemelle interm diaire en cushlon pour plus d amorti, COL N/A</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL junghans men s meister chronoscope automatic chronograph watch 027 4324 44 shop com, COL meister is junghans expression of the style of their classic watches while staying true to the principles of the finest materials and technological improvements refined aesthetics reminiscent of the watches designed by anton ziegler for the brand between 1930 and 1960 inside the watch is an automatic self winding chronograph j880 2 movement with 30 minute and 12 hour counters for the chronograph as well as sub second and day and date function this is displayed on a sunray brushed dark grey dial with hour and minutes marked clearly and simply the case is a stainless steel construction featuring exhibition case back with curved sicralan coated hard plexiglass true to the original giving it an elegant curvature to the dial the watch fastens on a 9 link stainless steel bracelet polished and matte finished for a perfect accompaniment to the case and dial, COL N/A</p>. Record B is <p>COL men s chronograph 1972 chronoscope solar junghans nur 749 00, COL N/A, COL junghans</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL canon 1133b001aa cb 2lx battery charger from solid signal, COL the canon cb 2lx compact battery charger is designed to take full advantage of high capacity rechargeable batteries it has been specially designed to charge the canon nb 5l battery, COL canon</p>. Record B is <p>COL cnd1133b001aa canon cb 2lx battery charger camera photo accessories page 2121 all tech toys, COL the cb 2lx battery charger charges canon nb 5l batteries allowing you to charge an additional battery for your digital camera, COL canon</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL sql/xml is making good progress, COL a eisenberg , j melton</p>. Record B is <p>COL sql/xml is making good progress, COL a eisenberg , j melton</p>. Given the attributes of the two records, are they the same?
+The size of the row level concatenation for training, validation, and test are: 6000, 10037, 10141
+0 out of 8791 data samples are filtered.
+0 out of 10037 data samples are filtered.
+The training phase starts from here.
+The size of the training and validation datasets are: 8791, 10037
+Here is the configuration for the experiment:
+	seed: 42	base_model: /scratch/mhussein/.cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659	dataset_name: music	mode: mode1 	max_len: 350	lr: 2e-05	batch_size: 1	patience: 6	p_start: 20
+Epoch: 1 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.9281194210052 secs
+Epoch: 2 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 84.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.0420417785645 secs
+Epoch: 3 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.0647509098053 secs
+Epoch: 4 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 81.70 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 908.468864440918 secs
+Epoch: 5 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.2809228897095 secs
+Epoch: 6 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.90 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 906.9817433357239 secs
+Epoch: 7 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.4291224479675 secs
+Epoch: 8 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.078465461731 secs
+Epoch: 9 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.1569254398346 secs
+Epoch: 10 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 908.0768594741821 secs
+Epoch: 11 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.70 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.6369752883911 secs
+Epoch: 12 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 81.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.9802451133728 secs
+Epoch: 13 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.7255439758301 secs
+Epoch: 14 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.6826930046082 secs
+Epoch: 15 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 81.30 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.1578767299652 secs
+Epoch: 16 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 84.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 906.1267824172974 secs
+Epoch: 17 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.0955262184143 secs
+Epoch: 18 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.05 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.4380211830139 secs
+Epoch: 19 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 84.00 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.474235534668 secs
+Epoch: 20 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 84.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.0206561088562 secs
+Epoch: 21 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.30 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 906.2096292972565 secs
+Epoch: 22 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.1696062088013 secs
+Epoch: 23 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 906.8169391155243 secs
+Epoch: 24 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 906.6425311565399 secs
+Epoch: 25 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.85 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 906.6408741474152 secs
+Epoch: 26 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.7426598072052 secs
+Epoch: 27 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.1891586780548 secs
+Epoch: 28 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 906.5564043521881 secs
+Epoch: 29 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 81.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.2425701618195 secs
+Epoch: 30 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 81.95 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 906.7859511375427 secs
+Epoch: 31 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.60 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.6812744140625 secs
+Epoch: 32 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.9746990203857 secs
+Epoch: 33 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 908.0833630561829 secs
+Epoch: 34 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.70 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.4580476284027 secs
+Epoch: 35 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.25 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.5191466808319 secs
+Epoch: 36 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.50 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.4994039535522 secs
+Epoch: 37 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.15 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 908.0319664478302 secs
+Epoch: 38 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.8397250175476 secs
+Epoch: 39 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.7548434734344 secs
+Epoch: 40 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.05 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 906.9560325145721 secs
+Epoch: 41 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.75 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.6655993461609 secs
+Epoch: 42 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 84.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.3845539093018 secs
+Epoch: 43 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 84.10 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 906.8875827789307 secs
+Epoch: 44 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.0305736064911 secs
+Epoch: 45 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.45 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.1157310009003 secs
+Epoch: 46 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 81.55 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.9081344604492 secs
+Epoch: 47 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 84.20 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.695130109787 secs
+Epoch: 48 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 82.80 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 908.1261222362518 secs
+Epoch: 49 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 83.65 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 908.0083403587341 secs
+Epoch: 50 | Train Loss: nan | Valid Loss: nan | Train acc: 61.65 | Valid acc: 84.35 | Train f1: 0.00 | Valid f1: 0.00 | Train Time: 907.8556413650513 secs
+The training phase is finished.
+Start the evaluation phase.
+0 out of 1100 data samples are filtered.

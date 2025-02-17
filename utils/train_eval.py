@@ -107,6 +107,15 @@ def train(tokenizer, model, train_dataset, valid_dataset, seed=42, patient=True,
                                                       skip_special_tokens=True)
                 train_gts += tokenizer.batch_decode(batch['labels'].detach().cpu().numpy(),
                                                     skip_special_tokens=True)
+            elif 'Llama' in base_model:
+                loss = output.loss
+                logits = output.logits
+
+                train_loss += loss.item()
+                logits = logits.detach().cpu().numpy()
+
+                train_preds += logits.argmax(axis=-1).flatten().tolist()
+                train_gts += batch['labels'].detach().cpu().numpy().flatten().tolist()
             else:
                 raise ValueError('Invalid model')
 
@@ -180,6 +189,15 @@ def evaluate(tokenizer, model, device, eval_dataloader, base_model):
             eval_preds += tokenizer.batch_decode(torch.argmax(output.logits, dim=-1).detach().cpu().numpy(),
                                                  skip_special_tokens=True)
             eval_gts += tokenizer.batch_decode(batch['labels'].detach().cpu().numpy(), skip_special_tokens=True)
+        elif 'Llama' in base_model:
+            loss = output.loss
+            logits = output.logits
+
+            eval_loss += loss.item()
+            logits = logits.detach().cpu().numpy()
+
+            eval_preds += logits.argmax(axis=-1).flatten().tolist()
+            eval_gts += batch['labels'].detach().cpu().numpy().flatten().tolist()
         else:
             raise ValueError('Invalid model')
     return eval_loss, eval_preds, eval_gts

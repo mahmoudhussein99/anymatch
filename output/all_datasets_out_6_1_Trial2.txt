@@ -1,0 +1,27 @@
+trainable params: 7504932864
+--------------------------------------------------
+Experiment to leave the wdc-computers dataset out with attr+row as training data.
+The model will be trained on the mixture of attribute and row level data.
+The training set size of wdc-shoes is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-watches is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of wdc-cameras is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of dbgo is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+The training set size of music is larger than 1200, we will do down-sampling with automl_filter to maximally 1200 pairs.
+Examples(row level) after the serialization are:
+
+Record A is <p>COL nike air zoom structure 19 para mujer violeta azul zapatillas, COL N/A, COL N/A</p>. Record B is <p>COL nike femme air zoom pegasus 33 violet blanc rose chaussures pour, COL unit s nike zoom air au talon et l avant pied pour plus de dynamismemesh tiss favorisant la circulation d air fraisc bles flywire maintenant le piedsemelle interm diaire en cushlon pour plus d amorti, COL N/A</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL junghans men s meister chronoscope automatic chronograph watch 027 4324 44 shop com, COL meister is junghans expression of the style of their classic watches while staying true to the principles of the finest materials and technological improvements refined aesthetics reminiscent of the watches designed by anton ziegler for the brand between 1930 and 1960 inside the watch is an automatic self winding chronograph j880 2 movement with 30 minute and 12 hour counters for the chronograph as well as sub second and day and date function this is displayed on a sunray brushed dark grey dial with hour and minutes marked clearly and simply the case is a stainless steel construction featuring exhibition case back with curved sicralan coated hard plexiglass true to the original giving it an elegant curvature to the dial the watch fastens on a 9 link stainless steel bracelet polished and matte finished for a perfect accompaniment to the case and dial, COL N/A</p>. Record B is <p>COL men s chronograph 1972 chronoscope solar junghans nur 749 00, COL N/A, COL junghans</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL canon 1133b001aa cb 2lx battery charger from solid signal, COL the canon cb 2lx compact battery charger is designed to take full advantage of high capacity rechargeable batteries it has been specially designed to charge the canon nb 5l battery, COL canon</p>. Record B is <p>COL cnd1133b001aa canon cb 2lx battery charger camera photo accessories page 2121 all tech toys, COL the cb 2lx battery charger charges canon nb 5l batteries allowing you to charge an additional battery for your digital camera, COL canon</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL sql/xml is making good progress, COL a eisenberg , j melton</p>. Record B is <p>COL sql/xml is making good progress, COL a eisenberg , j melton</p>. Given the attributes of the two records, are they the same?
+Record A is <p>COL Takin' My Time (Kiss My Amps Live), COL Tom Petty and the Heartbreakers, COL Kiss My Amps Live, COL 2011</p>. Record B is <p>COL 005-Nowhere, ca, COL The Sore Thumbs, COL Listen Up!! (2006), COL N/A</p>. Given the attributes of the two records, are they the same?
+The size of the row level concatenation for training, validation, and test are: 6000, 11918, 12291
+0 out of 11027 data samples are filtered.
+0 out of 11918 data samples are filtered.
+The training phase starts from here.
+The size of the training and validation datasets are: 11027, 11918
+Here is the configuration for the experiment:
+	seed: 42	base_model: /scratch/mhussein/.cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659	dataset_name: wdc-computers	mode: mode1 	max_len: 350	lr: 2e-05	batch_size: 32	patience: 6	p_start: 20
+trainable params: 7504932864
+--------------------------------------------------
+Experiment to leave the wdc-shoes dataset out with attr+row as training data.
+The model will be trained on the mixture of attribute and row level data.

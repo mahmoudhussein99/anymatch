@@ -1,0 +1,2302 @@
+
+You are using the default legacy behaviour of the <class 'transformers.models.t5.
+tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legac
+y` (previous) behavior will be used so nothing changes for you. If you want to us
+e the new behaviour, set `legacy=False`. This should only be set if you understan
+d what it means, and thoroughly read the reason why this was added as explained i
+n https://github.com/huggingface/transformers/pull/24565
+trainable params: 222903552
+--------------------------------------------------
+Experiment to leave the dbgo dataset out with row as training data.
+The model will be trained on the row level data.
+The training set size of music is larger than 1200, we will do down-sampling with
+ automl_filter to maximally 1200 pairs.
+Examples(row level) after the serialization are:
+
+Record A is <p>COL Takin' My Time (Kiss My Amps Live), COL Tom Petty and the Hear
+tbreakers, COL Kiss My Amps Live, COL 2011</p>. Record B is <p>COL 005-Nowhere, c
+a, COL The Sore Thumbs, COL Listen Up!! (2006), COL N/A</p>. Given the attributes
+ of the two records, are they the same?
+The size of the row level concatenation for training, validation, and test are: 1
+200, 3250, 3250
+0 out of 1200 data samples are filtered.
+0 out of 3250 data samples are filtered.
+The training phase starts from here.
+The size of the training and validation datasets are: 1200, 3250
+Here is the configuration for the experiment:
+        seed: 42        base_model: t5-base     dataset_name: dbgo      mode: mod
+e1     max_len: 350    lr: 0.0001batch_size: 32  patience: 6     p_start: 20
+Passing a tuple of `past_key_values` is deprecated and will be removed in Transfo
+rmers v4.48.0. You should pass an instance of `EncoderDecoderCache` instead, e.g.
+ `past_key_values=EncoderDecoderCache.from_legacy_cache(past_key_values)`.
+Epoch: 1 | Train Loss: 1.7015 | Valid Loss: 0.0265 | Train acc: 70.50 | Valid acc
+: 98.90 | Train f1: 32.70 | Valid f1: 98.93 | Train Time: 11.136391639709473 secs
+The best model is updated at epoch: 1 with f1 score 0.9892787524366472
+Epoch: 2 | Train Loss: 0.0114 | Valid Loss: 0.0037 | Train acc: 98.83 | Valid acc
+: 99.70 | Train f1: 98.25 | Valid f1: 99.70 | Train Time: 10.861331939697266 secs
+The best model is updated at epoch: 2 with f1 score 0.9969879518072289
+Epoch: 3 | Train Loss: 0.0064 | Valid Loss: 0.0072 | Train acc: 99.50 | Valid acc
+: 99.35 | Train f1: 99.25 | Valid f1: 99.38 | Train Time: 10.890795707702637 secs
+Epoch: 4 | Train Loss: 0.0007 | Valid Loss: 0.0107 | Train acc: 100.00 | Valid ac
+c: 99.55 | Train f1: 100.00 | Valid f1: 99.55 | Train Time: 11.064088106155396 se
+cs
+Epoch: 5 | Train Loss: 0.0028 | Valid Loss: 0.0052 | Train acc: 99.67 | Valid acc
+: 99.65 | Train f1: 99.50 | Valid f1: 99.65 | Train Time: 10.926761627197266 secs
+Epoch: 6 | Train Loss: 0.0012 | Valid Loss: 0.0050 | Train acc: 100.00 | Valid ac
+c: 99.65 | Train f1: 100.00 | Valid f1: 99.65 | Train Time: 10.85475778579712 sec
+s
+Epoch: 7 | Train Loss: 0.0003 | Valid Loss: 0.0046 | Train acc: 100.00 | Valid ac
+c: 99.80 | Train f1: 100.00 | Valid f1: 99.81 | Train Time: 10.794507026672363 se
+cs
+The best model is updated at epoch: 7 with f1 score 0.9980694980694981
+Epoch: 8 | Train Loss: 0.0001 | Valid Loss: 0.0067 | Train acc: 100.00 | Valid ac
+c: 99.60 | Train f1: 100.00 | Valid f1: 99.60 | Train Time: 10.935490369796753 se
+cs
+Epoch: 9 | Train Loss: 0.0001 | Valid Loss: 0.0061 | Train acc: 100.00 | Valid ac
+c: 99.70 | Train f1: 100.00 | Valid f1: 99.71 | Train Time: 10.728813409805298 se
+cs
+Epoch: 10 | Train Loss: 0.0000 | Valid Loss: 0.0056 | Train acc: 100.00 | Valid a
+cc: 99.70 | Train f1: 100.00 | Valid f1: 99.71 | Train Time: 10.898771047592163 s
+ecs
+Epoch: 11 | Train Loss: 0.0001 | Valid Loss: 0.0036 | Train acc: 100.00 | Valid a
+cc: 99.75 | Train f1: 100.00 | Valid f1: 99.76 | Train Time: 10.954903602600098 s
+ecs
+Epoch: 12 | Train Loss: 0.0000 | Valid Loss: 0.0094 | Train acc: 100.00 | Valid a
+cc: 99.55 | Train f1: 100.00 | Valid f1: 99.56 | Train Time: 11.101136684417725 s
+ecs
+Epoch: 13 | Train Loss: 0.0000 | Valid Loss: 0.0036 | Train acc: 100.00 | Valid a
+cc: 99.80 | Train f1: 100.00 | Valid f1: 99.80 | Train Time: 10.83141803741455 se
+cs
+Epoch: 14 | Train Loss: 0.0000 | Valid Loss: 0.0060 | Train acc: 100.00 | Valid a
+cc: 99.65 | Train f1: 100.00 | Valid f1: 99.66 | Train Time: 10.766019821166992 s
+ecs
+Epoch: 15 | Train Loss: 0.0001 | Valid Loss: 0.0238 | Train acc: 100.00 | Valid a
+cc: 98.80 | Train f1: 100.00 | Valid f1: 98.78 | Train Time: 10.870940685272217 s
+ecs
+Epoch: 16 | Train Loss: 0.0014 | Valid Loss: 0.0099 | Train acc: 99.83 | Valid ac
+c: 99.25 | Train f1: 99.75 | Valid f1: 99.26 | Train Time: 10.806836366653442 sec
+s
+Epoch: 17 | Train Loss: 0.0043 | Valid Loss: 0.0133 | Train acc: 99.50 | Valid ac
+c: 99.25 | Train f1: 99.25 | Valid f1: 99.26 | Train Time: 10.912972927093506 sec
+s
+Epoch: 18 | Train Loss: 0.0001 | Valid Loss: 0.0064 | Train acc: 100.00 | Valid a
+cc: 99.60 | Train f1: 100.00 | Valid f1: 99.60 | Train Time: 10.861550331115723 s
+ecs
+Epoch: 19 | Train Loss: 0.0001 | Valid Loss: 0.0056 | Train acc: 100.00 | Valid a
+cc: 99.65 | Train f1: 100.00 | Valid f1: 99.65 | Train Time: 10.90056586265564 se
+cs
+Epoch: 20 | Train Loss: 0.0001 | Valid Loss: 0.0063 | Train acc: 100.00 | Valid a
+cc: 99.55 | Train f1: 100.00 | Valid f1: 99.56 | Train Time: 10.92021131515503 se
+cs
+Epoch: 21 | Train Loss: 0.0000 | Valid Loss: 0.0066 | Train acc: 100.00 | Valid a
+cc: 99.55 | Train f1: 100.00 | Valid f1: 99.55 | Train Time: 10.941419124603271 s
+ecs
+Epoch: 22 | Train Loss: 0.0000 | Valid Loss: 0.0077 | Train acc: 100.00 | Valid a
+cc: 99.60 | Train f1: 100.00 | Valid f1: 99.60 | Train Time: 10.9592125415802 sec
+s
+Early stopping at epoch: 22
+The training phase is finished.
+Start the evaluation phase.
+0 out of 5742 data samples are filtered.
+The predictions and ground truth are:
+['True', 'True', 'True', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese
+', 'True', 'Truese', 'Truese', 'False', 'Truese', 'False', 'Truese', 'False', 'Tr
+ue', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', '
+Truese', 'Truese', 'False', 'Truese', 'True', 'Truese', 'False', 'Truese', 'True'
+, 'Truese', 'Truese', 'True', 'False', 'False', 'Truese', 'True', 'True', 'Truese
+', 'Truese', 'True', 'Truese', 'False', 'True', 'Truese', 'Truese', 'True', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'False', 'False', '
+True', 'True', 'True', 'True', 'Truese', 'Truese', 'True', 'False', 'Truese', 'Tr
+uese', 'False', 'True', 'True', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'True', 'False', 'False', 'False', 'Truese', 'False', 'False', 'False', 'T
+rue', 'False', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'False', 'False', 'False', 'True', 'Truese', 'Truese', 'Truese', 'Fa
+lse', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Trues
+e', 'Truese', 'True', 'True', 'True', 'Truese', 'True', 'Truese', 'Truese', 'True
+', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese',
+'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True', 'Truese', 'True
+se', 'True', 'Truese', 'Truese', 'True', 'True', 'Truese', 'False', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese
+', 'True', 'False', 'False', 'False', 'Truese', 'True', 'Truese', 'Truese', 'True
+', 'True', 'Truese', 'True', 'Truese', 'False', 'False', 'Truese', 'False', 'Fals
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese',
+'True', 'True', 'False', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'False', 'True', 'False', 'Tru
+ese', 'Truese', 'Truese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'True', 'True', 'Truese', 'Truese', 'True', 'True', 'True', 'False', '
+True', 'True', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', '
+Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True
+se', 'Truese', 'Truese', 'False', 'False', 'True', 'True', 'False', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'True', 'True', 'True', '
+False', 'False', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'False', 'Trues
+e', 'Truese', 'Truese', 'True', 'Truese', 'True', 'Truese', 'False', 'Truese', 'F
+alse', 'False', 'False', 'True', 'Truese', 'False', 'Truese', 'False', 'Truese',
+'Truese', 'False', 'False', 'Truese', 'Truese', 'False', 'Truese', 'False', 'Fals
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'True', 'True', 'Tru
+ese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese
+', 'True', 'Truese', 'True', 'False', 'Truese', 'False', 'False', 'False', 'False
+', 'Truese', 'Truese', 'Truese', 'False', 'True', 'Truese', 'Truese', 'Truese', '
+Truese', 'Truese', 'False', 'True', 'Truese', 'Truese', 'Truese', 'True', 'Truese
+', 'Truese', 'False', 'False', 'Truese', 'Truese', 'False', 'Truese', 'False', 'T
+ruese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True
+', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+'True', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Trues
+e', 'False', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'T
+ruese', 'Truese', 'Truese', 'Truese', 'True', 'False', 'Truese', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'True', 'T
+ruese', 'Truese', 'False', 'False', 'True', 'False', 'Truese', 'False', 'False',
+'Truese', 'Truese', 'Truese', 'True', 'Truese', 'False', 'True', 'Truese', 'True'
+, 'Truese', 'Truese', 'False', 'False', 'Truese', 'True', 'True', 'True', 'True',
+ 'True', 'False', 'False', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'False', 'Truese', 'True', 'False', 'False', 'False', 'Fa
+lse', 'False', 'Truese', 'Truese', 'False', 'False', 'False', 'Truese', 'Truese',
+ 'Truese', 'False', 'False', 'False', 'False', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'False'
+, 'False', 'Truese', 'False', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False',
+ 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', '
+Truese', 'False', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'False', 'Truese', 'Truese', 'True', 'Truese', 'False', 'Truese', 'Truese',
+ 'False', 'False', 'Truese', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'Truese', 'Truese', 'False', 'False', 'False', 'False', 'Fals
+e', 'Truese', 'True', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese',
+'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'False', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese',
+'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'False', 'True', 'False', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True
+se', 'False', 'Truese', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'Truese', 'True', 'True', 'Truese', 'False', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'False', 'True', 'Truese', 'Truese', 'Truese', 'Truese',
+'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'True'
+, 'True', 'False', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Tru
+ese', 'False', 'Truese', 'Truese', 'False', 'False', 'False', 'Truese', 'Truese',
+ 'Truese', 'True', 'True', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'False
+', 'False', 'True', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'F
+alse', 'True', 'Truese', 'True', 'Truese', 'Truese', 'True', 'Truese', 'Truese',
+'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', '
+False', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Fals
+e', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'True', 'Tr
+ue', 'True', 'Truese', 'True', 'False', 'True', 'False', 'True', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True', 'True', 'Fa
+lse', 'True', 'True', 'True', 'Truese', 'True', 'False', 'False', 'False', 'True'
+, 'Truese', 'Truese', 'Truese', 'True', 'True', 'True', 'False', 'Truese', 'Trues
+e', 'True', 'False', 'Truese', 'Truese', 'False', 'True', 'Truese', 'False', 'Fal
+se', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'False', 'False', 'False', 'Truese', 'False', 'False', 'False', 'False', 'Truese
+', 'False', 'True', 'Truese', 'True', 'Truese', 'False', 'Truese', 'False', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'True',
+ 'False', 'True', 'True', 'Truese', 'True', 'Truese', 'Truese', 'True', 'True', '
+Truese', 'Truese', 'True', 'Truese', 'True', 'False', 'False', 'False', 'Truese',
+ 'False', 'Truese', 'False', 'Truese', 'False', 'True', 'Truese', 'False', 'False
+', 'False', 'Truese', 'False', 'True', 'False', 'Truese', 'Truese', 'False', 'Tru
+ese', 'Truese', 'Truese', 'True', 'True', 'Truese', 'Truese', 'False', 'False', '
+True', 'Truese', 'Truese', 'True', 'False', 'Truese', 'Truese', 'Truese', 'False'
+, 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Tr
+ue', 'True', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', '
+Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'True', 'False', 'Truese', 'True', 'False', '
+Truese', 'False', 'Truese', 'False', 'Truese', 'False', 'False', 'False', 'Truese
+', 'Truese', 'False', 'True', 'Truese', 'Truese', 'True', 'False', 'Truese', 'Tru
+ese', 'False', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese
+', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+'Truese', 'Truese', 'Truese', 'False', 'Truese', 'False', 'False', 'Truese', 'Fal
+se', 'False', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'False', 'True', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'True', 'Truese', 'True', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Trues
+e', 'True', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', '
+Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Fals
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese',
+ 'False', 'False', 'False', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'Truese', 'True', 'True', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'False', 'False', 'False', 'False', 'False', 'False',
+'Truese', 'True', 'Truese', 'False', 'True', 'False', 'True', 'Truese', 'Truese',
+ 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese', 'True', 'False', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'True', 'False', '
+Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+ue', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese',
+'Truese', 'False', 'False', 'False', 'True', 'False', 'False', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'False', 'False', 'False', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'False', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'False', 'Truese', '
+Truese', 'Truese', 'False', 'Truese', 'False', 'Truese', 'True', 'Truese', 'True'
+, 'True', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'True', 'True', 'Trues
+e', 'False', 'True', 'True', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'False', 'Truese', 'True',
+ 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'True', 'Truese',
+'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'True', 'False', 'False', 'Truese', 'True',
+'True', 'False', 'False', 'Truese', 'False', 'False', 'Truese', 'Truese', 'True',
+ 'True', 'False', 'Truese', 'False', 'False', 'True', 'Truese', 'True', 'True', '
+Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False
+', 'Truese', 'False', 'Truese', 'False', 'True', 'False', 'False', 'Truese', 'Tru
+ese', 'Truese', 'False', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'False'
+, 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', '
+Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'Truese', 'False', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'False'
+, 'Truese', 'True', 'False', 'False', 'True', 'False', 'Truese', 'Truese', 'True'
+, 'True', 'Truese', 'Truese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Fals
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'True', 'True', 'Tr
+uese', 'Truese', 'True', 'False', 'Truese', 'Truese', 'True', 'True', 'True', 'Tr
+uese', 'True', 'Truese', 'Truese', 'Truese', 'False', 'False', 'Truese', 'Truese'
+, 'True', 'True', 'Truese', 'True', 'False', 'False', 'Truese', 'False', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'False', 'Truese', '
+False', 'Truese', 'False', 'Truese', 'False', 'Truese', 'Truese', 'False', 'False
+', 'False', 'False', 'Truese', 'False', 'False', 'False', 'Truese', 'False', 'Fal
+se', 'Truese', 'False', 'True', 'Truese', 'False', 'False', 'False', 'False', 'Fa
+lse', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'False'
+, 'Truese', 'True', 'Truese', 'False', 'False', 'Truese', 'False', 'Truese', 'Tru
+ese', 'False', 'False', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese'
+, 'False', 'False', 'False', 'Truese', 'False', 'Truese', 'Truese', 'False', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'False', 'Truese
+', 'Truese', 'False', 'False', 'False', 'True', 'Truese', 'Truese', 'Truese', 'Tr
+ue', 'False', 'True', 'Truese', 'Truese', 'True', 'Truese', 'True', 'False', 'Tru
+ese', 'True', 'Truese', 'True', 'True', 'Truese', 'True', 'Truese', 'False', 'Tru
+ese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'False'
+, 'True', 'True', 'Truese', 'False', 'True', 'Truese', 'False', 'Truese', 'False'
+, 'True', 'Truese', 'Truese', 'True', 'False', 'True', 'True', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'True', 'True', 'True', 'True', 'Truese', 'Truese', 'False'
+, 'False', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'False', 'Tr
+uese', 'False', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'False
+', 'Truese', 'False', 'Truese', 'Truese', 'False', 'False', 'Truese', 'False', 'T
+ruese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'False', 'True', 'True', 'Truese', 'Truese', 'Truese',
+'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Fa
+lse', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'Truese', 'True', 'True',
+'True', 'True', 'False', 'False', 'Truese', 'Truese', 'False', 'False', 'True', '
+Truese', 'False', 'True', 'False', 'True', 'Truese', 'True', 'Truese', 'True', 'F
+alse', 'Truese', 'False', 'Truese', 'False', 'True', 'True', 'Truese', 'Truese',
+'False', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+ue', 'True', 'True', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'False', 'True', 'False', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Trues
+e', 'False', 'False', 'False', 'False', 'Truese', 'True', 'Truese', 'True', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'False', 'Truese', 'Truese',
+ 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'True', 'Trues
+e', 'False', 'True', 'True', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'True', '
+Truese', 'Truese', 'Truese', 'False', 'Truese', 'True', 'True', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'True', 'True', 'Truese', 'True', 'Truese', 'Tru
+e', 'False', 'False', 'Truese', 'Truese', 'True', 'False', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'False', 'False', 'False', 'False', 'Truese', 'Truese', 'Truese
+', 'False', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'T
+ruese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'True', 'Truese', 'True', 'Tr
+ue', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'False',
+ 'True', 'True', 'Truese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'True', 'False', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'False', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese
+', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True', 'True', 'Truese', 'Tru
+e', 'True', 'False', 'False', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'True
+', 'Truese', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'Truese
+', 'Truese', 'False', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', '
+True', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'True', 'True', 'True', 'True', 'False', 'Trues
+e', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'Truese', 'Truese
+', 'Truese', 'Truese', 'True', 'True', 'False', 'False', 'Truese', 'Truese', 'Tru
+ese', 'True', 'Truese', 'False', 'False', 'False', 'False', 'Truese', 'False', 'T
+rue', 'True', 'True', 'False', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'False', 'True', 'False', 'False', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'False', 'False', 'Truese', 'True', 'True', 'Truese', 'True
+', 'Truese', 'True', 'False', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Fa
+lse', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'False', 'False'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'False', 'True', 'Truese', 'Fal
+se', 'False', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'True', 'True'
+, 'True', 'Truese', 'Truese', 'Truese', 'False', 'True', 'False', 'Truese', 'Fals
+e', 'True', 'Truese', 'Truese', 'Truese', 'True', 'False', 'Truese', 'True', 'Tru
+ese', 'False', 'Truese', 'Truese', 'False', 'False', 'Truese', 'False', 'Truese',
+ 'Truese', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'False', '
+False', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'False', 'Truese'
+, 'False', 'False', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'F
+alse', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True'
+, 'False', 'False', 'False', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Tr
+uese', 'True', 'False', 'Truese', 'False', 'False', 'False', 'Truese', 'Truese',
+'Truese', 'Truese', 'False', 'True', 'Truese', 'Truese', 'True', 'True', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'False', '
+False', 'Truese', 'False', 'Truese', 'True', 'True', 'Truese', 'False', 'True', '
+True', 'True', 'Truese', 'Truese', 'True', 'False', 'True', 'True', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'False', 'False', 'False', 'True', 'Truese',
+ 'Truese', 'Truese', 'False', 'False', 'False', 'Truese', 'Truese', 'False', 'Tru
+ese', 'False', 'False', 'Truese', 'False', 'False', 'False', 'Truese', 'False', '
+Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'False', 'False', 'Fals
+e', 'False', 'False', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'True', 'T
+rue', 'Truese', 'Truese', 'True', 'True', 'Truese', 'False', 'False', 'Truese', '
+False', 'Truese', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese', 'True
+se', 'True', 'Truese', 'True', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Tru
+e', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'False', 'Truese', 'Truese', 'T
+ruese', 'True', 'True', 'True', 'Truese', 'True', 'Truese', 'True', 'Truese', 'Tr
+ue', 'True', 'True', 'Truese', 'True', 'False', 'True', 'True', 'True', 'Truese',
+ 'True', 'Truese', 'Truese', 'False', 'False', 'False', 'False', 'False', 'True',
+ 'True', 'True', 'True', 'Truese', 'Truese', 'False', 'False', 'Truese', 'Truese'
+, 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'True', 'True', 'Truese', 'Tru
+e', 'True', 'True', 'Truese', 'Truese', 'Truese', 'True', 'True', 'Truese', 'True
+', 'Truese', 'Truese', 'Truese', 'True', 'True', 'Truese', 'True', 'Truese', 'Tru
+ese', 'False', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'True', 'Truese',
+'True', 'Truese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'True', 'Truese',
+ 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Trues
+e', 'Truese', 'True', 'Truese', 'True', 'Truese', 'True', 'Truese', 'Truese', 'Tr
+uese', 'Truese', 'True', 'Truese', 'True', 'Truese', 'Truese', 'False', 'Truese',
+ 'Truese', 'False', 'True', 'False', 'Truese', 'True', 'Truese', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese',
+ 'False', 'Truese', 'Truese', 'True', 'False', 'Truese', 'Truese', 'Truese', 'Tru
+e', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'True', 'Truese', 'T
+ruese', 'True', 'Truese', 'True', 'True', 'False', 'True', 'Truese', 'True', 'Fal
+se', 'Truese', 'Truese', 'Truese', 'True', 'False', 'Truese', 'False', 'Truese',
+'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+rue', 'True', 'Truese', 'False', 'False', 'Truese', 'Truese', 'False', 'Truese',
+'Truese', 'True', 'True', 'Truese', 'Truese', 'True', 'Truese', 'True', 'Truese',
+ 'True', 'False', 'Truese', 'False', 'Truese', 'Truese', 'False', 'False', 'False
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese',
+'False', 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'Fal
+se', 'False', 'False', 'Truese', 'False', 'True', 'False', 'False', 'Truese', 'Fa
+lse', 'False', 'False', 'False', 'True', 'False', 'True', 'Truese', 'Truese', 'Tr
+ue', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+ue', 'False', 'Truese', 'False', 'False', 'Truese', 'True', 'False', 'True', 'Tru
+e', 'True', 'True', 'True', 'Truese', 'Truese', 'False', 'False', 'Truese', 'True
+se', 'False', 'False', 'Truese', 'False', 'False', 'True', 'False', 'False', 'Fal
+se', 'False', 'Truese', 'True', 'Truese', 'Truese', 'False', 'False', 'Truese', '
+Truese', 'Truese', 'Truese', 'False', 'Truese', 'True', 'Truese', 'Truese', 'True
+se', 'Truese', 'True', 'True', 'Truese', 'False', 'Truese', 'Truese', 'Truese', '
+Truese', 'False', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'False', 'True
+se', 'Truese', 'Truese', 'Truese', 'False', 'True', 'Truese', 'Truese', 'True', '
+Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Trues
+e', 'False', 'Truese', 'Truese', 'True', 'True', 'True', 'True', 'Truese', 'Trues
+e', 'False', 'Truese', 'True', 'Truese', 'False', 'Truese', 'False', 'True', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'False'
+, 'True', 'Truese', 'Truese', 'False', 'True', 'True', 'True', 'Truese', 'True',
+'False', 'Truese', 'Truese', 'True', 'False', 'Truese', 'Truese', 'False', 'False
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+'True', 'Truese', 'False', 'Truese', 'True', 'Truese', 'True', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'True', 'False', 'Tru
+e', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'Truese', 'False'
+, 'Truese', 'False', 'True', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Tru
+e', 'True', 'False', 'Truese', 'True', 'Truese', 'Truese', 'True', 'True', 'Trues
+e', 'True', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'True', 'Truese', 'Fa
+lse', 'Truese', 'Truese', 'False', 'True', 'True', 'Truese', 'True', 'Truese', 'T
+ruese', 'Truese', 'True', 'False', 'Truese', 'Truese', 'False', 'True', 'Truese',
+ 'Truese', 'Truese', 'False', 'False', 'Truese', 'True', 'Truese', 'Truese', 'Tru
+e', 'True', 'False', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'False', 'T
+rue', 'Truese', 'Truese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'True', '
+Truese', 'Truese', 'Truese', 'False', 'True', 'Truese', 'False', 'False', 'Truese
+', 'False', 'Truese', 'True', 'True', 'True', 'True', 'False', 'True', 'False', '
+False', 'True', 'False', 'True', 'False', 'Truese', 'True', 'True', 'Truese', 'Tr
+uese', 'Truese', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'Fals
+e', 'False', 'True', 'False', 'False', 'Truese', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'Truese', 'Truese', 'False', 'False', 'Fa
+lse', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'True'
+, 'True', 'False', 'Truese', 'False', 'False', 'Truese', 'Truese', 'True', 'True'
+, 'True', 'True', 'False', 'True', 'False', 'Truese', 'True', 'Truese', 'True', '
+Truese', 'True', 'False', 'False', 'False', 'True', 'True', 'True', 'Truese', 'Fa
+lse', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'False', 'False', 'True', 'Truese', 'Truese', 'Truese', 'Truese',
+'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'Truese', 'False', 'False', 'Truese', 'True', 'True', 'True', '
+True', 'True', 'True', 'True', 'Truese', 'Truese', 'True', 'Truese', 'True', 'Tru
+ese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'False',
+ 'False', 'False', 'True', 'False', 'False', 'Truese', 'True', 'False', 'True', '
+True', 'True', 'False', 'False', 'Truese', 'Truese', 'Truese', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'False', 'False', 'False', 'Truese', 'False', 'False', 'False', 'Truese', 'Fa
+lse', 'False', 'False', 'Truese', 'False', 'Truese', 'True', 'False', 'False', 'F
+alse', 'Truese', 'False', 'Truese', 'False', 'False', 'Truese', 'True', 'False',
+'False', 'False', 'Truese', 'True', 'True', 'Truese', 'False', 'True', 'Truese',
+'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Trues
+e', 'Truese', 'True', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese', '
+Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'True', 'Truese'
+, 'True', 'True', 'False', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'True', 'True', 'True', 'Truese', 'Truese', 'False', 'True'
+, 'True', 'True', 'True', 'True', 'True', 'False', 'Truese', 'Truese', 'True', 'T
+rue', 'Truese', 'False', 'Truese', 'True', 'Truese', 'True', 'Truese', 'True', 'T
+ruese', 'Truese', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True'
+, 'Truese', 'Truese', 'True', 'True', 'False', 'True', 'Truese', 'False', 'True',
+ 'Truese', 'Truese', 'False', 'False', 'False', 'False', 'Truese', 'True', 'True'
+, 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'False', 'True', 'True', 'Fals
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True', 'Truese', '
+Truese', 'True', 'Truese', 'True', 'False', 'Truese', 'True', 'Truese', 'Truese',
+ 'True', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'False', 'Truese', 'False'
+, 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'T
+ruese', 'Truese', 'True', 'True', 'Truese', 'False', 'False', 'Truese', 'False',
+'True', 'True', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'False', 'Truese'
+, 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Tr
+uese', 'Truese', 'True', 'Truese', 'False', 'Truese', 'Truese', 'True', 'True', '
+Truese', 'False', 'True', 'True', 'Truese', 'True', 'Truese', 'Truese', 'Truese',
+ 'False', 'False', 'Truese', 'False', 'True', 'True', 'Truese', 'True', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'False', 'Tr
+ue', 'Truese', 'True', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese',
+'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'True', 'True', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True', '
+True', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True', 'Truese'
+, 'False', 'True', 'False', 'False', 'False', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'False', 'True', 'True', 'True', 'True', 'True
+', 'True', 'Truese', 'True', 'True', 'False', 'False', 'Truese', 'Truese', 'False
+', 'Truese', 'True', 'True', 'Truese', 'True', 'False', 'Truese', 'Truese', 'Fals
+e', 'Truese', 'True', 'True', 'False', 'Truese', 'Truese', 'True', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'True', 'True', 'True', 'Truese', 'True', 'True', 'True
+se', 'True', 'False', 'True', 'True', 'False', 'True', 'Truese', 'Truese', 'False
+', 'True', 'True', 'Truese', 'False', 'Truese', 'Truese', 'True', 'True', 'True',
+ 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'False', 'False', 'True', 'Trues
+e', 'True', 'Truese', 'Truese', 'True', 'True', 'Truese', 'Truese', 'False', 'Tru
+ese', 'Truese', 'Truese', 'True', 'False', 'Truese', 'False', 'Truese', 'Truese',
+ 'True', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'True', 'False', 'Truese', 'True', 'Truese', 'True', 'Truese', 'False', 'Fa
+lse', 'Truese', 'True', 'True', 'True', 'Truese', 'False', 'Truese', 'False', 'Tr
+uese', 'False', 'Truese', 'False', 'False', 'True', 'Truese', 'True', 'Truese', '
+False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'True'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Tr
+uese', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'Truese', 'True
+se', 'True', 'False', 'True', 'False', 'True', 'Truese', 'True', 'True', 'Truese'
+, 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'False', 'Truese', 'True', 'Tru
+ese', 'Truese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'True', 'False', 'Truese', 'True', 'Truese', 'True', 'True', 'Truese',
+ 'Truese', 'Truese', 'True', 'Truese', 'True', 'Truese', 'True', 'Truese', 'Trues
+e', 'False', 'False', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese',
+'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Tr
+uese', 'False', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'Trues
+e', 'Truese', 'False', 'False', 'False', 'False', 'Truese', 'Truese', 'True', 'Tr
+uese', 'True', 'False', 'False', 'False', 'Truese', 'False', 'False', 'True', 'Tr
+ue', 'Truese', 'False', 'Truese', 'True', 'True', 'True', 'Truese', 'True', 'True
+', 'False', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', '
+Truese', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+e', 'True', 'True', 'Truese', 'Truese', 'True', 'True', 'False', 'True', 'True',
+'Truese', 'Truese', 'True', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+e', 'False', 'False', 'False', 'True', 'False', 'Truese', 'True', 'Truese', 'Fals
+e', 'Truese', 'Truese', 'False', 'Truese', 'True', 'True', 'False', 'False', 'Tru
+e', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese', 'True', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+rue', 'True', 'True', 'False', 'False', 'Truese', 'True', 'True', 'True', 'True',
+ 'Truese', 'Truese', 'False', 'False', 'False', 'False', 'False', 'False', 'Trues
+e', 'False', 'Truese', 'False', 'False', 'False', 'Truese', 'Truese', 'False', 'T
+ruese', 'Truese', 'False', 'Truese', 'True', 'True', 'True', 'True', 'Truese', 'T
+rue', 'Truese', 'True', 'True', 'Truese', 'True', 'Truese', 'Truese', 'Truese', '
+False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Truese', '
+Truese', 'Truese', 'False', 'Truese', 'Truese', 'True', 'Truese', 'True', 'False'
+, 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', '
+False', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'True', 'Truese', 'Trues
+e', 'False', 'True', 'Truese', 'True', 'Truese', 'False', 'Truese', 'False', 'Fal
+se', 'Truese', 'Truese', 'True', 'False', 'True', 'False', 'False', 'True', 'True
+', 'True', 'Truese', 'Truese', 'False', 'False', 'False', 'True', 'False', 'Trues
+e', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'True', 'False', 'False',
+ 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'True', 'False', 'Tru
+ese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'True', 'Truese', 'True', 'True', 'Truese', 'Truese', 'False', 'Truese', 'Tru
+e', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'False', 'False', '
+False', 'False', 'False', 'True', 'False', 'False', 'False', 'Truese', 'Truese',
+'Truese', 'Truese', 'Truese', 'False', 'Truese', 'False', 'False', 'Truese', 'Tru
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'True', 'True', 'Truese', 'T
+ruese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'True', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'False', 'Fa
+lse', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'False', 'False', 'Truese', 'Truese', 'Truese', 'True', 'False', 'Truese', 'Tru
+ese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False
+', 'False', 'Truese', 'False', 'Truese', 'Truese', 'False', 'True', 'Truese', 'Fa
+lse', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'False', 'True', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'True',
+ 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'True', 'Tru
+e', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True', 'Tr
+uese', 'Truese', 'True', 'True', 'False', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'False', 'False', 'False', 'False', 'Truese', 'False', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'False'
+, 'False', 'False', 'Truese', 'False', 'Truese', 'Truese', 'False', 'Truese', 'Fa
+lse', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'False', 'False'
+, 'False', 'False', 'Truese', 'False', 'False', 'False', 'Truese', 'False', 'Fals
+e', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+rue', 'Truese', 'False', 'False', 'False', 'False', 'True', 'True', 'Truese', 'Tr
+ue', 'False', 'Truese', 'False', 'Truese', 'Truese', 'True', 'Truese', 'Truese',
+'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+ue', 'Truese', 'False', 'Truese', 'False', 'True', 'Truese', 'Truese', 'False', '
+Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'True', 'Truese', 'Truese', 'False', 'False', 'Truese', 'False', 'Truese'
+, 'True', 'False', 'True', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'True', 'Truese', 'Truese', '
+True', 'True', 'Truese', 'True', 'True', 'True', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Tru
+e', 'Truese', 'True', 'False', 'True', 'Truese', 'True', 'True', 'True', 'True',
+'False', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'False', 'True', 'Trues
+e', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Fal
+se', 'False', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese',
+ 'True', 'Truese', 'True', 'True', 'False', 'True', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'False', 'Truese', 'T
+ruese', 'Truese', 'False', 'Truese', 'Truese', 'False', 'False', 'Truese', 'Trues
+e', 'True', 'False', 'False', 'False', 'False', 'Truese', 'Truese', 'False', 'Tru
+ese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese',
+'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'True', 'Truese', 'Truese', 'Truese', 'False', 'True', 'Truese', 'False',
+'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Tru
+e', 'False', 'False', 'False', 'Truese', 'False', 'Truese', 'Truese', 'False', 'T
+rue', 'Truese', 'Truese', 'False', 'Truese', 'False', 'False', 'Truese', 'True',
+'False', 'False', 'Truese', 'Truese', 'True', 'Truese', 'True', 'True', 'Truese',
+ 'True', 'True', 'Truese', 'False', 'Truese', 'Truese', 'True', 'Truese', 'True',
+ 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+'Truese', 'Truese', 'True', 'False', 'True', 'Truese', 'Truese', 'Truese', 'False
+', 'False', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'False', 'Truese', '
+False', 'Truese', 'False', 'Truese', 'False', 'Truese', 'True', 'Truese', 'True',
+ 'True', 'Truese', 'True', 'True', 'Truese', 'Truese', 'False', 'False', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'False', 'True', 'Truese', 'True', 'Truese', 'Tru
+ese', 'False', 'True', 'Truese', 'Truese', 'True', 'Truese', 'False', 'False', 'F
+alse', 'Truese', 'Truese', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'True', 'False', 'True', 'Tru
+e', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'False', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'False', 'True', 'True',
+ 'True', 'False', 'False', 'Truese', 'Truese', 'Truese', 'True', 'True', 'True',
+'True', 'Truese', 'False', 'Truese', 'Truese', 'True', 'Truese', 'False', 'Truese
+', 'Truese', 'False', 'Truese', 'Truese', 'True', 'True', 'Truese', 'False', 'Tru
+e', 'False', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'True', 'Truese', 'Truese', 'True', 'Truese', 'True', 'False', 'True', 'T
+rue', 'True', 'False', 'True', 'False', 'Truese', 'Truese', 'Truese', 'Truese', '
+True', 'Truese', 'True', 'True', 'False', 'False', 'False', 'Truese', 'Truese', '
+Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'False', 'Truese', 'True
+se', 'False', 'False', 'False', 'Truese', 'False', 'False', 'True', 'False', 'Fal
+se', 'False', 'Truese', 'False', 'Truese', 'True', 'Truese', 'Truese', 'Truese',
+'Truese', 'Truese', 'Truese', 'False', 'False', 'Truese', 'False', 'True', 'True'
+, 'False', 'False', 'False', 'True', 'Truese', 'Truese', 'False', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese'
+, 'True', 'True', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Tru
+ese', 'True', 'True', 'False', 'True', 'False', 'False', 'Truese', 'False', 'True
+se', 'False', 'True', 'Truese', 'Truese', 'True', 'True', 'True', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+'Truese', 'True', 'False', 'True', 'True', 'True', 'Truese', 'True', 'Truese', 'T
+ruese', 'True', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'False', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'F
+alse', 'Truese', 'Truese', 'False', 'Truese', 'True', 'True', 'True', 'False', 'T
+ruese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Fal
+se', 'Truese', 'Truese', 'False', 'True', 'Truese', 'False', 'Truese', 'Truese',
+'Truese', 'False', 'Truese', 'True', 'False', 'False', 'Truese', 'True', 'Truese'
+, 'Truese', 'Truese', 'False', 'False', 'Truese', 'Truese', 'True', 'True', 'True
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'True', 'False', 'Truese', 'True', 'Truese', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'False
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'False', 'False', 'False', 'True', 'Truese', 'True', 'False', 'False'
+, 'True', 'Truese', 'Truese', 'False', 'False', 'Truese', 'False', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'False', 'False', 'False', 'Truese', 'Truese', 'False',
+ 'Truese', 'False', 'True', 'True', 'True', 'Truese', 'Truese', 'Truese', 'True',
+ 'False', 'True', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Tru
+e', 'False', 'True', 'True', 'Truese', 'False', 'True', 'Truese', 'Truese', 'True
+', 'True', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'False', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'Truese', 'False', 'False', 'Truese', 'True', 'Truese', 'Truese', 'Tru
+ese', 'True', 'Truese', 'False', 'Truese', 'Truese', 'False', 'True', 'Truese', '
+Truese', 'False', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'False', 'Truese', 'Truese', 'False', 'True', 'Truese', 'False', '
+Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'False', 'False', 'True
+se', 'Truese', 'Truese', 'True', 'Truese', 'True', 'Truese', 'Truese', 'True', 'T
+ruese', 'True', 'False', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese',
+'False', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'True', 'True', 'True',
+'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'F
+alse', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'False', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'False',
+'Truese', 'Truese', 'False', 'Truese', 'True', 'Truese', 'Truese', 'True', 'Trues
+e', 'True', 'Truese', 'Truese', 'True', 'Truese', 'False', 'True', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'False', 'Truese
+', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese',
+'True', 'Truese', 'False', 'Truese', 'False', 'False', 'Truese', 'Truese', 'False
+', 'Truese', 'True', 'Truese', 'Truese', 'False', 'Truese', 'False', 'Truese', 'T
+rue', 'False', 'False', 'Truese', 'True', 'True', 'Truese', 'False', 'True', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True
+se', 'False', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Fal
+se', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese',
+'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Trues
+e', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'False', 'False', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+rue', 'Truese', 'False', 'Truese', 'False', 'True', 'False', 'True', 'True', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'Truese', 'True', 'Tru
+e', 'True', 'Truese', 'Truese', 'False', 'False', 'Truese', 'True', 'False', 'Tru
+ese', 'False', 'False', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True', '
+Truese', 'Truese', 'True', 'Truese', 'True', 'False', 'True', 'False', 'False', '
+Truese', 'Truese', 'False', 'False', 'False', 'False', 'False', 'Truese', 'True',
+ 'Truese', 'True', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'True', 'Trues
+e', 'False', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True', 'False', 'Tr
+uese', 'False', 'True', 'False', 'Truese', 'Truese', 'False', 'Truese', 'False',
+'True', 'True', 'False', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'Truese'
+, 'False', 'False', 'Truese', 'Truese', 'True', 'Truese', 'False', 'Truese', 'Tru
+e', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'True', 'False', 'False', 'Tr
+uese', 'False', 'False', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'False', 'Fal
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'False', 'False',
+ 'False', 'Truese', 'Truese', 'False', 'False', 'Truese', 'Truese', 'False', 'Tru
+ese', 'Truese', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese', 'Truese
+', 'Truese', 'False', 'True', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'T
+rue', 'Truese', 'Truese', 'Truese', 'True', 'False', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'True', 'False', 'Truese', 'Truese', 'False', 'Tr
+ue', 'True', 'Truese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'False', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'Fals
+e', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'False', 'Truese', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'T
+rue', 'Truese', 'False', 'Truese', 'True', 'Truese', 'Truese', 'False', 'Truese',
+ 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'True', 'Trues
+e', 'Truese', 'Truese', 'False', 'True', 'False', 'False', 'True', 'Truese', 'Tru
+e', 'True', 'True', 'Truese', 'True', 'True', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False
+', 'True', 'Truese', 'Truese', 'Truese', 'False', 'False', 'False', 'Truese', 'Fa
+lse', 'False', 'Truese', 'False', 'Truese', 'Truese', 'True', 'Truese', 'Truese',
+ 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'True', 'True', 'False', 'Truese', 'True', 'Tr
+ue', 'True', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'False', 'Truese', 'False', 'Truese', 'True', 'False',
+ 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+'Truese', 'Truese', 'Truese', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'False', 'Truese', 'True', 'Truese', 'True', 'Truese', 'Truese'
+, 'True', 'Truese', 'Truese', 'Truese', 'False', 'True', 'False', 'False', 'Trues
+e', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', '
+Truese', 'True', 'Truese', 'True', 'False', 'False', 'False', 'False', 'Truese',
+'False', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'True', 'Fals
+e', 'Truese', 'False', 'Truese', 'True', 'False', 'Truese', 'True', 'True', 'True
+se', 'True', 'False', 'False', 'Truese', 'Truese', 'False', 'Truese', 'True', 'Tr
+uese', 'Truese', 'Truese', 'False', 'True', 'True', 'Truese', 'Truese', 'Truese',
+ 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'False', 'False', 'Truese', 'Tr
+uese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'True', 'True', 'False', 'Truese', 'False', 'False', 'Tr
+ue', 'Truese', 'True', 'True', 'False', 'False', 'Truese', 'Truese', 'False', 'Fa
+lse', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True
+se', 'False', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False',
+'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', '
+Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False
+', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese',
+'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'T
+ruese', 'False', 'False', 'Truese', 'Truese', 'False', 'False', 'False', 'Truese'
+, 'True', 'Truese', 'False', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'Truese', 'False', 'False', 'Truese', 'Truese', 'Truese', 'True
+se', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Trues
+e', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese'
+, 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese',
+ 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'Truese', 'True', 'True
+se', 'False', 'True', 'True', 'Truese', 'Truese', 'Truese', 'Truese', 'False', 'T
+rue', 'Truese', 'False', 'True', 'False', 'False', 'False', 'Truese', 'True', 'Tr
+ue', 'True', 'True', 'Truese', 'Truese', 'False', 'False', 'Truese', 'Truese', 'T
+ruese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'Truese', 'True', 'True
+', 'Truese', 'False', 'False', 'Truese', 'True', 'Truese', 'Truese', 'True', 'Tru
+ese', 'Truese', 'Truese', 'Truese', 'True', 'True', 'Truese', 'Truese', 'Truese',
+ 'False', 'False', 'False', 'False', 'Truese', 'False', 'True', 'True', 'False',
+'Truese']
+['True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'T
+rue', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'Tru
+e', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'False',
+ 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'Fa
+lse', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True
+', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'True', 'False', '
+False', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'True
+', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'Fal
+se', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'False',
+ 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Fa
+lse', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'True'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+True', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'Fal
+se', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'True',
+'False', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+True', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'Tr
+ue', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'Fals
+e', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'False',
+ 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'Tr
+ue', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'True
+', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True',
+'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', '
+False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False
+', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'True',
+'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False
+', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'True',
+ 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'Fals
+e', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'Fals
+e', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'True', '
+False', 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'False
+', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'Fals
+e', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'True', 'False', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'Tru
+e', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'True',
+ 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', '
+True', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Fa
+lse', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'True', 'False', 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'Tr
+ue', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'F
+alse', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True',
+'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'T
+rue', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Fals
+e', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'True', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'True',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Tr
+ue', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'Fals
+e', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'False',
+'True', 'True', 'False', 'False', 'True', 'True', 'False', 'True', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False
+', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'False', 'True', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'True
+', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'False', 'Fa
+lse', 'True', 'False', 'False', 'False', 'True', 'True', 'True', 'False', 'True',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', '
+False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Fals
+e', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'False', 'True',
+'False', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'False', 'Fal
+se', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fals
+e', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False',
+ 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'False', 'Fa
+lse', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False
+', 'False', 'True', 'False', 'False', 'True', 'False', 'True', 'False', 'True', '
+False', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'False',
+ 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'Fa
+lse', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'True',
+ 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fa
+lse', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'True'
+, 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'True', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'T
+rue', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'True
+', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'F
+alse', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'False
+', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+ 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'True', 'Fal
+se', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'True',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'Tr
+ue', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False'
+, 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'F
+alse', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', '
+False', 'True', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'Fals
+e', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'F
+alse', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'Fal
+se', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'False', 'False', '
+False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'True'
+, 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False', '
+True', 'True', 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', '
+False', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Tru
+e', 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'False', 'T
+rue', 'False', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'False',
+ 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True',
+ 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'Tru
+e', 'False', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'True',
+'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'F
+alse', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'False
+', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'False',
+'False', 'True', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'Fa
+lse', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'Fals
+e', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'Tru
+e', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False'
+, 'False', 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'True
+', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+'False', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'True', 'True
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'True',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'Fa
+lse', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'Tru
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'True', 'False',
+'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'Fa
+lse', 'False', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'False'
+, 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'True', '
+False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'T
+rue', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'True'
+, 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'True', '
+False', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'Tru
+e', 'True', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'True',
+'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'True', 'Fa
+lse', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'True'
+, 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True',
+'False', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'Fa
+lse', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'True', '
+False', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'Fal
+se', 'True', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'True',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'True'
+, 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'False', 'False', '
+False', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'Fals
+e', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'Tr
+ue', 'True', 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True',
+'False', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'True',
+ 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'True
+', 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False', '
+False', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'False', 'Tru
+e', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'T
+rue', 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'False
+', 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'Fal
+se', 'False', 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', '
+False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'Fa
+lse', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'False
+', 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'False',
+'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'Fal
+se', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'False'
+, 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False', '
+True', 'True', 'False', 'False', 'True', 'True', 'False', 'True', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'True',
+'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', '
+True', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False
+', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'False',
+'False', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'True', '
+True', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'Fal
+se', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False'
+, 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'True', '
+True', 'False', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'False'
+, 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'False', '
+False', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'Fals
+e', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'False',
+'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', '
+False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'True', 'False', 'False', 'True', 'False', 'True', 'False', 'Fals
+e', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'False
+', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'True', 'False',
+'True', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'Fal
+se', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'False',
+'True', 'True', 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'Tru
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'True', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', '
+False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'Tr
+ue', 'False', 'False', 'False', 'True', 'True', 'True', 'False', 'True', 'True',
+'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'Tr
+ue', 'False', 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'False',
+ 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', '
+False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'False
+', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'False', 'False', '
+False', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True'
+, 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Tru
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False
+', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False',
+'False', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'True
+', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+ 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+True', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'True'
+, 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'True',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'T
+rue', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', '
+True', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'Tru
+e', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'True', 'False',
+ 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'F
+alse', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'Tr
+ue', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'True'
+, 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'T
+rue', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'False',
+ 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'Tru
+e', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'Tr
+ue', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Fals
+e', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'Fal
+se', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Tr
+ue', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'False'
+, 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'True',
+ 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'Fa
+lse', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Tru
+e', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'Tru
+e', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False', '
+True', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'True', 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'True',
+'True', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'Fa
+lse', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'False', '
+True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True'
+, 'False', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'False', '
+False', 'False', 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False
+', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'Tr
+ue', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'True',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'True', 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'True', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'True',
+ 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'Fal
+se', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'True
+', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'False', 'T
+rue', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'Fal
+se', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+ 'True', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Tr
+ue', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False
+', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'F
+alse', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'Fals
+e', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'F
+alse', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'True
+', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'False', '
+False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fa
+lse', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'False
+', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'F
+alse', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'Tru
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'False',
+'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'Tru
+e', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', '
+True', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'Fal
+se', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'Fa
+lse', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'Fals
+e', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'F
+alse', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'True', 'False
+', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False'
+, 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'F
+alse', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'True',
+'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'T
+rue', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'True
+', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', '
+False', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'Fa
+lse', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'True', 'True', 'False', 'False']
+Test acc and f1 for dbgo are 40.30 and 38.43
+0 out of 3250 data samples are filtered.
+The predictions and ground truth are:
+['False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'Truese', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'True', 'True', 'False', 'True', 'False', 'False', 'False', '
+False', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'True', 'Tru
+e', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'False'
+, 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'T
+rue', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'True
+', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'False',
+'True', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'Fals
+e', 'True', 'False', 'True', 'Fal', 'False', 'True', 'False', 'True', 'False', 'F
+alse', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'True', 'False
+', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'F
+alse', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'Fal
+se', 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'True', 'False',
+ 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'Fal
+se', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'True',
+'True', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'Tru
+e', 'False', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'False',
+ 'Truese', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'True', '
+False', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'False', 'Tru
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False
+', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'False', '
+True', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'False', 'False'
+, 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'F
+alse', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'True'
+, 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+'False', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Tru
+e', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'F
+alse', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'Fa
+lse', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'True', 'False'
+, 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+'False', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'Fa
+lse', 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False'
+, 'False', 'True', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'T
+rue', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'False', 'True'
+, 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'False', '
+True', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Fa
+lse', 'False', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'True',
+ 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', '
+False', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'True'
+, 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'F
+alse', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'Fals
+e', 'True', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'False',
+'False', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'Tr
+ue', 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'False', 'True', '
+False', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'Tru
+e', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'True',
+ 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'False', 'Fal
+se', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'True', 'False',
+'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'F
+alse', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'Fals
+e', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False'
+, 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'True', 'True', 'Tr
+ue', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'Truese', 'Fals
+e', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False'
+, 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'False', 'F
+alse', 'False', 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'False
+', 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'T
+rue', 'False', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False
+', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'Fa
+lse', 'False', 'True', 'True', 'False', 'True', 'False', 'True', 'False', 'True',
+ 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'Tr
+ue', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'True', 'False'
+, 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'True', '
+True', 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'True', 'True',
+ 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'True', 'Tru
+e', 'True', 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'False', '
+False', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'Tru
+e', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'True',
+'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'False',
+ 'False', 'True', 'False', 'True', 'False', 'True', 'False', 'True', 'False', 'Fa
+lse', 'Truese', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'False
+', 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'True', '
+False', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'Fa
+lse', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'True',
+ 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'F
+alse', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'Fal
+se', 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'False',
+'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'T
+rue', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'Fals
+e', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'F
+alse', 'False', 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'True'
+, 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'Tr
+ue', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False
+', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'True', '
+False', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'False', 'Fals
+e', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'T
+rue', 'False', 'False', 'True', 'True', 'False', 'True', 'False', 'False', 'False
+', 'False', 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'False', '
+False', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'Tru
+e', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'False', '
+True', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'True',
+ 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'T
+rue', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'True'
+, 'False', 'True', 'False', 'True', 'False', 'True', 'False', 'True', 'True', 'Fa
+lse', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'Fals
+e', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'Tru
+e', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'False', 'True', '
+True', 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'True',
+ 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'True', 'Tru
+e', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'False',
+'False', 'True', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'Tr
+ue', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'True', '
+False', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'Tru
+e', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'True',
+ 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'Fa
+lse', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'True',
+ 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'T
+rue', 'Fal', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'F
+alse', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'Fals
+e', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'False',
+'False', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'True'
+, 'True', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'False', '
+True', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'False
+', 'False', 'True', 'False', 'True', 'Truese', 'True', 'True', 'False', 'False',
+'True', 'True', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'Tru
+e', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'True',
+ 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'F
+alse', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'True',
+ 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'Fal
+se', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'False', 'False',
+'Truese', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'Tr
+ue', 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'True', 'False',
+'True', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'False'
+, 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'False', '
+False', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'False
+', 'True', 'True', 'False', 'False', 'False', 'Truese', 'True', 'True', 'True', '
+False', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'False',
+ 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True',
+'False', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'True'
+, 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'Fal
+se', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'True',
+ 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'False', 'Fal
+se', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'True', '
+True', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'False
+', 'True', 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'True', 'T
+rue', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'True', 'True'
+, 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'True
+', 'False', 'False', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'Tr
+ue', 'False', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'False',
+'False', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'Tr
+ue', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'False',
+'False', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'True
+', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'Fa
+lse', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'True'
+, 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'True', 'False', 'Tru
+e', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'False', '
+True', 'True', 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'True',
+ 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'Truese', 'True', 'Tru
+e', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'Fal
+se', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'True', '
+False', 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'True
+', 'True', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'False',
+'False', 'False', 'False', 'True', 'True', 'False', 'True', 'False', 'True', 'Fal
+se', 'False', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'T
+rue', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'True',
+'False', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'Tru
+e', 'False', 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'False',
+'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True',
+ 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'Tr
+ue', 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'True',
+ 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'True', 'Tru
+e', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'T
+rue', 'True', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False'
+, 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'Fals
+e', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'Fal
+se', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'False', '
+True', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'True
+', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'Tru
+e', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'True', 'True', '
+True', 'True', 'True', 'False', 'False', 'True', 'False', 'True', 'False', 'True'
+, 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'False', '
+True', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'True
+', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'True', 'False', '
+True', 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'True'
+, 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'Tr
+ue', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'False',
+ 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'Tru
+e', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'Tr
+ue', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'False'
+, 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True'
+, 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'T
+rue', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'False
+', 'False', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'False',
+'True', 'False', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'True'
+, 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'T
+rue', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'True', 'False'
+, 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'T
+rue', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', '
+False', 'True', 'True', 'False', 'False', 'True', 'False', 'True', 'False', 'Fals
+e', 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'T
+rue', 'True', 'False', 'False', 'True', 'True', 'False', 'True', 'True', 'False',
+ 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'Fal
+se', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'False',
+ 'False', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'False', 'Fals
+e', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'False',
+ 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'False
+', 'False', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'False',
+'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'True',
+'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True',
+'False', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'T
+rue', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'False', 'True'
+, 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'Tru
+e', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'Tr
+ue', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'Tr
+ue', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'False',
+'True', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False',
+ 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'True'
+, 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True
+', 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'T
+rue', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'True',
+'True', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False',
+ 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'True'
+, 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'Tr
+ue', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'Tr
+uese', 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'True'
+, 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'False', 'T
+rue', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'False',
+'True', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'False
+', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'Tr
+ue', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'F
+alse', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'T
+rue', 'False', 'True', 'False', 'True', 'True', 'False', 'False', 'True', 'True',
+ 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'T
+rue', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'T
+rue', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'False',
+ 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'False', 'True
+', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'Tru
+e', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False',
+ 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True',
+ 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'True', 'Tru
+e', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'True',
+'True', 'False', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'True'
+, 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'F
+alse', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'False',
+ 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'False', 'Fals
+e', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'Tr
+ue', 'False', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'True', '
+True', 'False', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'True',
+'False', 'True', 'True', 'False', 'True', 'False', 'True', 'False', 'True', 'True
+', 'False', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'True', '
+True', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'True',
+'False', 'False', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'Fals
+e', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'Fa
+lse', 'False', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'True',
+'False', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'False
+', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'T
+rue', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'Tr
+ue', 'True', 'False', 'True', 'True', 'False', 'True', 'False', 'True', 'True', '
+False', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'False',
+ 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'False
+', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'False', '
+False', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'True
+', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'Fa
+lse', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'False',
+'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True',
+ 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'Fals
+e', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'Fal
+se', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'True',
+'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', '
+True', 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'False', 'True',
+ 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'True
+', 'Fal', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True
+', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'True', 'Tr
+ue', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'Tr
+ue', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'T
+rue', 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'True', 'False',
+ 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'True'
+, 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'Tr
+ue', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'False', 'True', '
+True', 'False', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'False'
+, 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'True', '
+True', 'True', 'False', 'True', 'True', 'False', 'True', 'True', 'True', 'False',
+ 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True',
+ 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'True'
+, 'False', 'True', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'Fa
+lse', 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'True',
+ 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'Fal', 'True',
+ 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'Fal
+se', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'T
+rue', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'F
+alse', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'True
+', 'True', 'False', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'Tru
+e', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'F
+alse', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'False
+', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'Tru
+e', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'T
+rue', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'False',
+'False', 'True', 'False', 'False', 'True', 'True', 'False', 'True', 'True', 'Fals
+e', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'False',
+ 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'F
+alse', 'False', 'True', 'False', 'True', 'True', 'False', 'Truese', 'False', 'Tru
+e', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'True', 'Fa
+lse', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'True', 'True',
+ 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'True
+', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'Tru
+e', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'Tru
+e', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'True', '
+True', 'True', 'True', 'True', 'True', 'True', 'True', 'False']
+['False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'True', 'True
+', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'False',
+ 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'Tr
+ue', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'True'
+, 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'False', '
+True', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'False
+', 'True', 'False', 'True', 'True', 'False', 'True', 'False', 'True', 'False', 'F
+alse', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'True', 'False
+', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'
+, 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'F
+alse', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'Fal
+se', 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'True', 'False',
+ 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'Fal
+se', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'True',
+'True', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'Tru
+e', 'False', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'False',
+ 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'F
+alse', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'False', 'True
+', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False'
+, 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'T
+rue', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'False', 'False',
+ 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'Fa
+lse', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'Fals
+e', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'True',
+ 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False', '
+False', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'Fal
+se', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'True
+', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'Fa
+lse', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'Fal
+se', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'True', 'False',
+ 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', '
+False', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'Fal
+se', 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False',
+ 'False', 'True', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'Tr
+ue', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'False', 'True',
+ 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'T
+rue', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Fal
+se', 'False', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'True',
+'False', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'F
+alse', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'True',
+ 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'Fa
+lse', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'False
+', 'True', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'False', '
+False', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'Tru
+e', 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'F
+alse', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'True
+', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'True',
+'False', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'F
+alse', 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'False', 'Fals
+e', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'True', 'False', '
+False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'Fa
+lse', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'False
+', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False',
+ 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'True', 'True', 'Tru
+e', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False'
+, 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False',
+'False', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'False', 'Fal
+se', 'False', 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'False',
+ 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'Tru
+e', 'False', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False',
+ 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'Fals
+e', 'False', 'True', 'True', 'False', 'True', 'False', 'True', 'False', 'True', '
+False', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'True
+', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'True', 'False',
+'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'Tr
+ue', 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'True', 'True', '
+False', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'True', 'True'
+, 'True', 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'Fa
+lse', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'True', 'True'
+, 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'True', 'T
+rue', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False
+', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'False', '
+False', 'True', 'False', 'True', 'False', 'True', 'False', 'True', 'False', 'Fals
+e', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'False',
+'True', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'True', 'Fal
+se', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'False
+', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'F
+alse', 'False', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'Fals
+e', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'False'
+, 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'False', 'Tr
+ue', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True
+', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'False',
+ 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'Fals
+e', 'False', 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'True', '
+True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'True'
+, 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'False', 'False',
+'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'Fal
+se', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'False', 'False',
+ 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'True
+', 'False', 'False', 'True', 'True', 'False', 'True', 'False', 'False', 'False',
+'False', 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'False', 'Fal
+se', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'True',
+ 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'Tru
+e', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'T
+rue', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'True
+', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'True', '
+False', 'True', 'False', 'True', 'False', 'True', 'False', 'True', 'True', 'False
+', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False',
+ 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True',
+ 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'Tru
+e', 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'True', 'F
+alse', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'True', 'True',
+ 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'Fa
+lse', 'True', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'True'
+, 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'Fal
+se', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'True',
+ 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'True', 'T
+rue', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'False
+', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'True', 'F
+alse', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'True
+', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'Fal
+se', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'False'
+, 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'F
+alse', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'True',
+'True', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'Tr
+ue', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'False',
+ 'False', 'True', 'False', 'True', 'False', 'True', 'True', 'False', 'False', 'Tr
+ue', 'True', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'True',
+ 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'F
+alse', 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'Fals
+e', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'T
+rue', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'False'
+, 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'False', 'False', 'Fa
+lse', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'True',
+ 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'Tru
+e', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'T
+rue', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'False', 'Fals
+e', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'False', '
+True', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'False
+', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'Tru
+e', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'Fals
+e', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'Tr
+ue', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'False',
+'False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'True', 'Tru
+e', 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'False', 'False',
+'True', 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'True'
+, 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'False', 'T
+rue', 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'True', 'True',
+ 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'True', 'True', 'Tr
+ue', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'F
+alse', 'False', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True',
+'False', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'Fals
+e', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'True',
+'True', 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'False', 'Fals
+e', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'T
+rue', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'False',
+ 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'True', 'Tr
+ue', 'True', 'True', 'False', 'True', 'True', 'False', 'True', 'False', 'True', '
+False', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'True'
+, 'True', 'True', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'Tru
+e', 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'T
+rue', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'False', '
+True', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'False'
+, 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'Tr
+ue', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'False
+', 'False', 'False', 'True', 'True', 'False', 'True', 'False', 'True', 'False', '
+False', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True',
+'True', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'False
+', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'True', 'F
+alse', 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'False', 'True'
+, 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True
+', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'True', '
+True', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'True', 'Fals
+e', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'True', 'True', 'T
+rue', 'True', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'True',
+'True', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'Tru
+e', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'T
+rue', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'False', '
+False', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'True',
+ 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'Tr
+ue', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'F
+alse', 'False', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'True',
+ 'True', 'True', 'False', 'False', 'True', 'False', 'True', 'False', 'True', 'Fal
+se', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'True',
+ 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'Tr
+ue', 'False', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'True',
+ 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'True', 'Tru
+e', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'True', '
+False', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'False', 'Fals
+e', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'T
+rue', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'True', '
+True', 'False', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'Tru
+e', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'Fal
+se', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'True',
+'True', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'False', 'Fa
+lse', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'True'
+, 'False', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'Tru
+e', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'True',
+'False', 'True', 'False', 'False', 'True', 'True', 'False', 'True', 'False', 'Fal
+se', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'True',
+'False', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'False'
+, 'True', 'True', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'F
+alse', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'True',
+'True', 'False', 'False', 'True', 'True', 'False', 'True', 'True', 'False', 'True
+', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'False', '
+True', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'Fals
+e', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'T
+rue', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'True
+', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'False', 'Fa
+lse', 'True', 'False', 'False', 'False', 'True', 'True', 'False', 'False', 'True'
+, 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'False
+', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'False
+', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'True',
+'False', 'False', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'Fal
+se', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'T
+rue', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'True', '
+True', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', '
+True', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'True'
+, 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'True
+', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'True', 'Fal
+se', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'Tr
+ue', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'True',
+'True', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'True', 'True'
+, 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'True
+', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'Fal
+se', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'True', '
+True', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'False',
+'True', 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'Fals
+e', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'False', 'True', '
+True', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'True',
+ 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'Tru
+e', 'False', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'T
+rue', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'False',
+'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', '
+False', 'True', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'False
+', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'True', '
+True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'True', '
+True', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'True'
+, 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'False', 'True', 'Tru
+e', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'Fa
+lse', 'False', 'True', 'True', 'False', 'False', 'True', 'False', 'False', 'True'
+, 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'False
+', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'True', 'True', 'Tr
+ue', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'True',
+ 'False', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'Fals
+e', 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'False',
+'False', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'True'
+, 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'False', 'False', 'Tr
+ue', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'F
+alse', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'True', 'True',
+'False', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'False'
+, 'True', 'True', 'False', 'True', 'False', 'True', 'False', 'True', 'True', 'Fal
+se', 'False', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'True',
+'True', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'False'
+, 'False', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'False', 'Tr
+ue', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'False', '
+False', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'True', 'False'
+, 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'Tru
+e', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'False', 'True', '
+False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'True', 'T
+rue', 'False', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'False',
+ 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'True'
+, 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'Tru
+e', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'False',
+ 'False', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'True', 'Tru
+e', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'False', '
+True', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'True',
+ 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True'
+, 'True', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'False', 'Tr
+ue', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'False', 'T
+rue', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'True',
+ 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True',
+'False', 'False', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'True'
+, 'True', 'True', 'False', 'True', 'False', 'False', 'True', 'True', 'True', 'Tru
+e', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'Tr
+ue', 'True', 'False', 'False', 'True', 'True', 'True', 'False', 'True', 'True', '
+True', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True', '
+True', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'True',
+'True', 'True', 'False', 'False', 'True', 'True', 'False', 'True', 'False', 'True
+', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'True', 'True', 'Tru
+e', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'True', '
+True', 'True', 'True', 'True', 'False', 'False', 'True', 'False', 'True', 'True',
+ 'False', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'Fal
+se', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'True', 'True',
+ 'True', 'False', 'True', 'True', 'False', 'True', 'True', 'True', 'False', 'Fals
+e', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True
+', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'Fal
+se', 'True', 'False', 'True', 'False', 'True', 'True', 'False', 'True', 'False',
+'True', 'False', 'False', 'True', 'False', 'False', 'True', 'True', 'True', 'True
+', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'True', 'True', 'Fal
+se', 'False', 'True', 'False', 'True', 'True', 'True', 'False', 'True', 'False',
+'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'True',
+ 'True', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'False'
+, 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'T
+rue', 'False', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True', '
+True', 'True', 'False', 'True', 'True', 'True', 'False', 'False', 'True', 'False'
+, 'True', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'T
+rue', 'True', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'True', '
+True', 'False', 'True', 'True', 'True', 'False', 'True', 'False', 'True', 'True',
+ 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'False', 'Fals
+e', 'True', 'False', 'False', 'True', 'True', 'False', 'True', 'True', 'False', '
+True', 'False', 'True', 'False', 'False', 'False', 'True', 'False', 'False', 'Fal
+se', 'True', 'False', 'False', 'True', 'False', 'False', 'True', 'False', 'False'
+, 'False', 'True', 'False', 'True', 'True', 'False', 'False', 'False', 'True', 'T
+rue', 'True', 'True', 'False', 'True', 'False', 'True', 'True', 'True', 'False',
+'True', 'False', 'False', 'False', 'True', 'True', 'False', 'True', 'True', 'True
+', 'True', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'Tr
+ue', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'T
+rue', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'T
+rue', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'True',
+ 'True', 'True', 'True', 'True', 'True', 'True', 'False']
+Test acc and f1 for music are 99.57 and 99.56
+Evaluation finished.
+--------------------------------------------------
+(anymatch) mhussein@sgs-gpu04:/scratch/mhussein/anymatch$ nvidia-smi
+Sun Feb  2 20:23:57 2025
++--------------------------------------------------------------------------------
+---------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version:
+12.6     |
+|-----------------------------------------+------------------------+-------------
+---------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Unc
+orr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Co
+mpute M. |
+|                                         |                        |
+  MIG M. |
+|=========================================+========================+=============
+=========|
+|   0  NVIDIA GeForce RTX 3090        Off |   00000000:23:00.0 Off |
+     N/A |
+|  0%   53C    P2            121W /  350W |   22566MiB /  24576MiB |      0%
+ Default |
+|                                         |                        |
+     N/A |
++-----------------------------------------+------------------------+-------------
+---------+
+|   1  NVIDIA GeForce RTX 3090        Off |   00000000:41:00.0 Off |
+     N/A |
+|  0%   51C    P2            128W /  350W |    3386MiB /  24576MiB |      0%
+ Default |
+|                                         |                        |
+     N/A |
++-----------------------------------------+------------------------+-------------
+---------+
+|   2  NVIDIA GeForce RTX 3090        Off |   00000000:A1:00.0 Off |
+     N/A |
+|  0%   53C    P2            120W /  350W |    3386MiB /  24576MiB |      0%
+ Default |
+|                                         |                        |
+     N/A |
++-----------------------------------------+------------------------+-------------
+---------+
+|   3  NVIDIA GeForce RTX 3090        Off |   00000000:C1:00.0 Off |
+     N/A |
+|  0%   51C    P2            116W /  350W |    3386MiB /  24576MiB |      0%
+ Default |
+|                                         |                        |
+     N/A |
++-----------------------------------------+------------------------+-------------
+---------+
+
+
++--------------------------------------------------------------------------------
+---------+
+| Processes:
+         |
+|  GPU   GI   CI        PID   Type   Process name                              GP
+U Memory |
+|        ID   ID                                                               Us
+age      |
+|================================================================================
+=========|
+|    0   N/A  N/A    491184      C   python
+15966MiB |
+|    0   N/A  N/A    522024      C   python
+ 6322MiB |
+|    0   N/A  N/A    551726      C   python
+  256MiB |
+|    1   N/A  N/A    522024      C   python
+ 3376MiB |
+|    2   N/A  N/A    522024      C   python
+ 3376MiB |
+|    3   N/A  N/A    522024      C   python
+ 3376MiB |
++--------------------------------------------------------------------------------
+---------+
+(anymatch) mhussein@sgs-gpu04:/scratch/mhussein/anymatch$ nvidia-smi
+Mon Feb  3 23:56:40 2025
++--------------------------------------------------------------------------------
+---------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version:
+12.6     |
+|-----------------------------------------+------------------------+-------------
+---------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Unc
+orr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Co
+mpute M. |
+|                                         |                        |
+  MIG M. |
+|=========================================+========================+=============
+=========|
+|   0  NVIDIA GeForce RTX 3090        Off |   00000000:23:00.0 Off |
+     N/A |
+|  0%   62C    P2            168W /  350W |   16790MiB /  24576MiB |     27%
+ Default |
+|                                         |                        |
+     N/A |
++-----------------------------------------+------------------------+-------------
+---------+
+|   1  NVIDIA GeForce RTX 3090        Off |   00000000:41:00.0 Off |
+     N/A |
+|  0%   32C    P8             40W /  350W |   15904MiB /  24576MiB |      0%
+ Default |
+|                                         |                        |
+     N/A |
++-----------------------------------------+------------------------+-------------
+---------+
+|   2  NVIDIA GeForce RTX 3090        Off |   00000000:A1:00.0 Off |
+     N/A |
+|  0%   57C    P2            244W /  350W |    2432MiB /  24576MiB |     46%
+ Default |
+|                                         |                        |
+     N/A |
++-----------------------------------------+------------------------+-------------
+---------+
+|   3  NVIDIA GeForce RTX 3090        Off |   00000000:C1:00.0 Off |
+     N/A |
+|  0%   31C    P8             35W /  350W |       2MiB /  24576MiB |      0%
+ Default |
+|                                         |                        |
+     N/A |
++-----------------------------------------+------------------------+-------------
+---------+
+
+
++--------------------------------------------------------------------------------
+---------+
+| Processes:
+         |
+|  GPU   GI   CI        PID   Type   Process name                              GP
+U Memory |
+|        ID   ID                                                               Us
+age      |
+|================================================================================
+=========|
+|    0   N/A  N/A    560457      C   python
+15700MiB |
+|    0   N/A  N/A   1787730      C   python
+ 1074MiB |
+|    1   N/A  N/A    721486      C   python3
+15894MiB |
+|    2   N/A  N/A   1857184      C   python
+ 2422MiB |
++--------------------------------------------------------------------------------
+---------+
+[1]+  Killed                  python loo.py --leaved_dataset_name dbgo --base_mod
+el t5-base
+(anymatch) mhussein@sgs-gpu04:/scratch/
+(anymatch) mhussein@sgs-gpu04:/scratch/mhussein/any(anymatch) mhussein@sgs-gpu04:
+/scratc(a
+(anymatch) mhussein@sgs-gpu04:/scratch/mhussein/anymatch$ nvidia-smi
+Tue Feb  4 12:22:47 2025
++--------------------------------------------------------------------------------
+---------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version:
+12.6     |
+|-----------------------------------------+------------------------+-------------
+---------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Unc
+orr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Co
+mpute M. |
+|                                         |                        |
+  MIG M. |
+|=========================================+========================+=============
+=========|
+|   0  NVIDIA GeForce RTX 3090        Off |   00000000:23:00.0 Off |
+     N/A |
+|  0%   48C    P2            118W /  350W |   22542MiB /  24576MiB |      0%
+ Default |
+|                                         |                        |
+     N/A |
++-----------------------------------------+------------------------+-------------
+---------+
+|   1  NVIDIA GeForce RTX 3090        Off |   00000000:41:00.0 Off |
+     N/A |
+|  0%   31C    P8             40W /  350W |   17612MiB /  24576MiB |      0%
+ Default |
+|                                         |                        |
+     N/A |
++-----------------------------------------+------------------------+-------------
+---------+
+|   2  NVIDIA GeForce RTX 3090        Off |   00000000:A1:00.0 Off |
+     N/A |
+|  0%   68C    P2            317W /  350W |   18972MiB /  24576MiB |     90%
+ Default |
+|                                         |                        |
+     N/A |
++-----------------------------------------+------------------------+-------------
+---------+
+|   3  NVIDIA GeForce RTX 3090        Off |   00000000:C1:00.0 Off |
+     N/A |
+|  0%   31C    P8             35W /  350W |       5MiB /  24576MiB |      0%
+ Default |
+|                                         |                        |
+     N/A |
++-----------------------------------------+------------------------+-------------
+---------+
+
+
++--------------------------------------------------------------------------------
+---------+
+| Processes:
+         |
+|  GPU   GI   CI        PID   Type   Process name                              GP
+U Memory |
+|        ID   ID                                                               Us
+age      |
+|================================================================================
+=========|
+|    0   N/A  N/A   2597640      C   python3
+22532MiB |
+|    1   N/A  N/A    721486      C   python3
+17602MiB |
+|    2   N/A  N/A   2599944      C   python
+18962MiB |
++--------------------------------------------------------------------------------
+---------+
+(anymatch) mhussein@sgs-gpu04:/scratch/mhussein/anymatch$
